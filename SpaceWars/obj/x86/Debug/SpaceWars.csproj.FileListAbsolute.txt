@@ -1,0 +1,6 @@
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\bin\x86\Debug\SpaceWars.exe
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\bin\x86\Debug\SpaceWars.pdb
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\obj\x86\Debug\SpaceWars.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\obj\x86\Debug\SpaceWars.exe
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\obj\x86\Debug\SpaceWars.pdb
