@@ -8,15 +8,15 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWarsContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>F:\Softuni\Game\Game\SpaceWars\SpaceWarsContent\</RootDirectory>
+      <LoggerRootDirectory>F:\Softuni\Game\Game\SpaceWars\SpaceWars\</LoggerRootDirectory>
+      <IntermediateDirectory>F:\Softuni\Game\Game\SpaceWars\SpaceWars\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>F:\Softuni\Game\Game\SpaceWars\SpaceWars\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2015-10-25T01:06:21.9063294+03:00</Value>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-11-30T02:00:11.6018185+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
