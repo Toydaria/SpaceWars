@@ -1,22 +1,10 @@
-C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\bin\x86\Debug\SpaceWars.exe
-C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\bin\x86\Debug\SpaceWars.pdb
 C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\obj\x86\Debug\SpaceWars.csprojResolveAssemblyReference.cache
 C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\obj\x86\Debug\SpaceWars.exe
 C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\obj\x86\Debug\SpaceWars.pdb
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\bin\x86\Debug\SpaceWars.exe
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\bin\x86\Debug\SpaceWars.pdb
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\bin\x86\Debug\Microsoft.Xna.Framework.dll
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\bin\x86\Debug\Microsoft.Xna.Framework.xml
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\obj\x86\Debug\SpaceWars.csprojResolveAssemblyReference.cache
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\obj\x86\Debug\SpaceWars.exe
-F:\Softuni\Game\Game\SpaceWars\SpaceWars\obj\x86\Debug\SpaceWars.pdb
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\SpaceWars.exe
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\SpaceWars.pdb
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\Content\space.xnb
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\Content\ship.xnb
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\Content\laser.xnb
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\Content\asteroid.xnb

@@ -6,7 +6,7 @@
 
     using Screens.ScreenManagement;
 
-    public class Starfield : GameScreen
+    public class Starfield
     {
         public Texture2D texture;
         public Vector2 bgPos1, bgPos2;
@@ -25,6 +25,10 @@
         public void LoadContent(ContentManager Content)
         {
             texture = Content.Load<Texture2D>("space");
+        }
+
+        public void UnloadContet()
+        {
         }
 
         //Draw

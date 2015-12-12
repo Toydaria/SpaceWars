@@ -72,7 +72,5 @@ namespace SpaceWars
             spriteBatch.End();
             base.Draw(gameTime);
         }
-
-
     }
 }

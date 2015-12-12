@@ -10,7 +10,7 @@
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Content;
 
-    public class GameScreen
+    public abstract class GameScreen
     {
         protected ContentManager content;
         [XmlIgnore]

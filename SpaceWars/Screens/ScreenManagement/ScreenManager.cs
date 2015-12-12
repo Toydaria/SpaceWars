@@ -6,7 +6,8 @@
     using System.Text;
 
     using Xml;
-    using SpaceWars.GameObjects;
+    using GameObjects;
+    using Screens;
 
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Content;
@@ -50,11 +51,11 @@
 
         public ScreenManager()
         {
-            Dimensions = new Vector2(1024, 640);
-            currentScreen = new Starfield();
+            Dimensions = new Vector2(800, 950);
+            currentScreen = new MainScreen();
             xmlGameScreenManager = new XmlManager<GameScreen>();
             xmlGameScreenManager.Type = currentScreen.Type;
-            currentScreen = xmlGameScreenManager.Load("Loads/MainMenu.xml");
+            currentScreen = xmlGameScreenManager.Load("Loads/MainScreen.xml");
         }
 
         public void LoadContent(ContentManager Content)
@@ -77,6 +78,5 @@
         {
             currentScreen.Draw(spriteBatch);
         }
-
     }
 }
