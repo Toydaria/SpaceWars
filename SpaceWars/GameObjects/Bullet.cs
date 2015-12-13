@@ -13,7 +13,7 @@
         private float speed;
         private int bulletDelay = 20;
         private int bulletsCount;
-
+        private int damage;
         public Rectangle boundingBox;
         public bool isVisible;
         public List<Bullet> bulletList = new List<Bullet>();
@@ -25,7 +25,11 @@
             texture = null;
             speed = 10;
             isVisible = false;
+            Damage = 30;//TODO: hardcoded value to change
         }
+
+        public int Damage { get; set; }
+
 
         //LoadContent
         public void LoadContent(ContentManager Content)
