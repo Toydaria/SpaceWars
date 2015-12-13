@@ -13,6 +13,7 @@
         private float speed;
         public Bullet bullet = new Bullet();
         private int health;
+        private int damage;
         public static Vector2 position;
         public Rectangle boundingBox;
 
@@ -22,10 +23,11 @@
             position = new Vector2(350, 890);
             speed = 10;
             Health = 100;//TODO: hardcoded value to change
+            Damage = 100;//TODO: hardcoded value to change
         }
 
         public int Health { get; set; }
-        
+        public int Damage { get; set; }
         public void LoadContent(ContentManager Content)
         {
             bullet.LoadContent(Content);
