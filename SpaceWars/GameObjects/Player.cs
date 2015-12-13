@@ -12,7 +12,7 @@
         private Texture2D texture;
         private float speed;
         public Bullet bullet = new Bullet();
-
+        private int health;
         public static Vector2 position;
         public Rectangle boundingBox;
 
@@ -20,8 +20,12 @@
         {
             texture = null;
             position = new Vector2(350, 890);
-            speed = 10;            
+            speed = 10;
+            Health = 100;//TODO: hardcoded value to change
         }
+
+        public int Health { get; set; }
+        
         public void LoadContent(ContentManager Content)
         {
             bullet.LoadContent(Content);
