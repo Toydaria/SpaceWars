@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SpaceWars.Engine" Collapsed="true">
+    <Position X="23" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEEAAAAAAAwAAAAAAAAAAAAAAAAgAAAAAAAAAAAQ=</HashCode>
+      <FileName>Engine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.Program" Collapsed="true">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.GameObjects.Asteroids" Collapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAGQIAAAAQAgAAARAAIAAAAAAAAwAgAAQAAAAAAAQ=</HashCode>
+      <FileName>GameObjects\Asteroids.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.GameObjects.Bullet" Collapsed="true">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAEACAAAAChgAAABAAIAAAAAAAAwAgIAAAgAAAAAw=</HashCode>
+      <FileName>GameObjects\Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.GameObjects.Player" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAGACAAAEAggAAAAAAIAAAAAAAAwAgABAAAAAAAAw=</HashCode>
+      <FileName>GameObjects\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.GameObjects.Starfield" Collapsed="true">
+    <Position X="23" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAAAAAAAAIAwAAAAAAAQAAAAQ=</HashCode>
+      <FileName>GameObjects\Starfield.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.GameObjects.Asteroid" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACACAAAAAgiAgAAAAIAgAEAAABDAAAAQAAAAEAAA=</HashCode>
+      <FileName>Model\Asteroid.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SpaceWars.GameObjects.AsteroidsPack.ChunkyAsteroid" Collapsed="true">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\AsteroidsPack\ChunkyAsteroid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.GameObjects.AsteroidsPack.RedFartAsteroid" Collapsed="true">
+    <Position X="1.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\AsteroidsPack\RedFartAsteroid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.GameObjects.AsteroidsPack.RockyAsteroid" Collapsed="true">
+    <Position X="3.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\AsteroidsPack\RockyAsteroid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.Model.Bonus" Collapsed="true">
+    <Position X="9" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Bonus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.Model.BigEnemy" Collapsed="true">
+    <Position X="14.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Enemies\BigEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.Model.LittleEnemy" Collapsed="true">
+    <Position X="17" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Enemies\LittleEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.Model.Enemy" Collapsed="true">
+    <Position X="15.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.Model.GameObject" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAABACAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Model\GameObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SpaceWars.Model.Bonuses.HealthBonus" Collapsed="true">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Bonuses\HealthBonus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.Model.Bonuses.ShieldBonus" Collapsed="true">
+    <Position X="10.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Bonuses\ShieldBonus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.Screens.MainScreen" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAAAAAAgAAAAAAAAAAAAAAAAABAAAAAQAAACQ=</HashCode>
+      <FileName>Screens\MainScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.Screens.SplashScreen" Collapsed="true">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Screens\SplashScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.Screens.ScreenManagement.GameScreen" Collapsed="true">
+    <Position X="1.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCEAAAAAAAAgAAAAAAAAAAAAAAAAAAAQAAAAAAAAQ=</HashCode>
+      <FileName>Screens\ScreenManagement\GameScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.Screens.ScreenManagement.ScreenManager" Collapsed="true">
+    <Position X="21.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAAgAAAgAAAAAAAAIgAABgAAAARAAkAAAAAAQ=</HashCode>
+      <FileName>Screens\ScreenManagement\ScreenManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceWars.Xml.XmlManager&lt;T&gt;" Collapsed="true">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Xml\XmlManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SpaceWars.Interfaces.IAsteroid" Collapsed="true">
+    <Position X="19.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAgAgAAAAAAgAAAAABBAAAAAAAAAEAAA=</HashCode>
+      <FileName>Interfaces\IAsteroid.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SpaceWars.Interfaces.IEnemy" Collapsed="true">
+    <Position X="21.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SpaceWars.Interfaces.IGameObject" Collapsed="true">
+    <Position X="23" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAABACAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IGameObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SpaceWars.Interfaces.IPlayer" Collapsed="true">
+    <Position X="19.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

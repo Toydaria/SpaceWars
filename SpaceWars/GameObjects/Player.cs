@@ -30,6 +30,8 @@ namespace SpaceWars.GameObjects
 
         public int Health { get; set; }
         public int Damage { get; set; }
+        public int Shield { get; set; }
+
         public void LoadContent(ContentManager Content)
         {
             bullet.LoadContent(Content);

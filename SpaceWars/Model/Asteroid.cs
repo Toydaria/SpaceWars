@@ -3,10 +3,11 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceWars.Interfaces;
+using SpaceWars.Model;
 
 namespace SpaceWars.GameObjects
 {
-    public abstract class Asteroid : IAsteroid
+    public abstract class Asteroid : GameObject, IAsteroid
     {
         protected Texture2D image;
         //protected Rectangle sourceRectangle;

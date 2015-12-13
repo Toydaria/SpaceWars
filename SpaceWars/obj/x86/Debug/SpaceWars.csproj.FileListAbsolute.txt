@@ -8,3 +8,13 @@ C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\Space
 C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\Content\ship.xnb
 C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\Content\laser.xnb
 C:\Users\Alex\Documents\Visual Studio 2013\Projects\WindowsGame1\SpaceWars\SpaceWars\Content\asteroid.xnb
+C:\GitHubProjects\SpaceWars\SpaceWars\obj\x86\Debug\SpaceWars.csprojResolveAssemblyReference.cache
+C:\GitHubProjects\SpaceWars\SpaceWars\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\GitHubProjects\SpaceWars\SpaceWars\Content\space.xnb
+C:\GitHubProjects\SpaceWars\SpaceWars\Content\ship.xnb
+C:\GitHubProjects\SpaceWars\SpaceWars\Content\laser.xnb
+C:\GitHubProjects\SpaceWars\SpaceWars\Content\asteroid.xnb
+C:\GitHubProjects\SpaceWars\SpaceWars\obj\x86\Debug\SpaceWars.exe
+C:\GitHubProjects\SpaceWars\SpaceWars\obj\x86\Debug\SpaceWars.pdb
+C:\GitHubProjects\SpaceWars\SpaceWars\SpaceWars.exe
+C:\GitHubProjects\SpaceWars\SpaceWars\SpaceWars.pdb

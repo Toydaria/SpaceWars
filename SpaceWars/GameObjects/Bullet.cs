@@ -12,12 +12,14 @@
         private Vector2 origin;
         private float speed;
         private int bulletDelay = 20;
-        private int bulletsCount;
         private int damage;
+        private int bulletsCount;
+        
         public Rectangle boundingBox;
         public bool isVisible;
         public List<Bullet> bulletList = new List<Bullet>();
         public Vector2 position;
+        
 
         //Constructer
         public Bullet()
