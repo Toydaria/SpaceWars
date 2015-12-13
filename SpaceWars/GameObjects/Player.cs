@@ -1,4 +1,6 @@
-﻿namespace SpaceWars.GameObjects
+﻿using SpaceWars.Model;
+
+namespace SpaceWars.GameObjects
 {
     using System.Collections.Generic;
 
@@ -7,7 +9,7 @@
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
 
-    public class Player
+    public class Player: GameObject
     {
         private Texture2D texture;
         private float speed;
