@@ -11,13 +11,9 @@ namespace SpaceWars.Interfaces
 
         Vector2 Position { get; set; }
 
-        float Speed { get; set; }
+        Vector2 Speed { get; set; }
 
         Rectangle BoundingBox { get; set; }
-
-        
-
-
 
     }
 }
