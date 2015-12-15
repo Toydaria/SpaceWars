@@ -9,13 +9,8 @@ namespace SpaceWars.Interfaces
 {
     interface IAsteroid
     {
-        Texture2D Image { get; set; }
-        Vector2 Position { get; set; }
-        Vector2 Velocity { get; set; }
-        Rectangle SourceRectangle { get; set; }
+        Vector2 Origin { get; }
+        string Asset { get; }
         int Damage { get; set; }
-
-        void Explode();
-        void Draw(SpriteBatch spriteBatch);
     }
 }

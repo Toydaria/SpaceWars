@@ -10,7 +10,9 @@ namespace SpaceWars.GameObjects.AsteroidsPack
 {
     class RedFartAsteroid : Asteroid
     {
-        public RedFartAsteroid(ContentManager content, string asset, Vector2 position, Vector2 velocity, int health, int damage) : base(content, "Sprites/redfart", new Vector2(randomPicker.Next(0, 800), -50), new Vector2(0, 6), 60)
+        private const int RedFartAsteroidDamage = 60;
+
+        public RedFartAsteroid(ContentManager content) : base(content, "redfart", new Vector2(randomPicker.Next(0, 780), -50), new Vector2(0, 6), RedFartAsteroidDamage)
         {
         }
     }

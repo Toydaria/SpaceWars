@@ -9,7 +9,7 @@
     {
         public Texture2D Texture { get; set; }
         public Vector2 Position { get; set; }
-        public float Speed { get; set; }
+        public Vector2 Speed { get; set; }
         public Rectangle BoundingBox { get; set; }
     }
 }
