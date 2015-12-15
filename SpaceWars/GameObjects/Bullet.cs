@@ -25,7 +25,7 @@
         public Bullet()
         {
             texture = null;
-            speed = 10;
+            speed = 15;
             isVisible = false;
             Damage = 30;//TODO: hardcoded value to change
         }

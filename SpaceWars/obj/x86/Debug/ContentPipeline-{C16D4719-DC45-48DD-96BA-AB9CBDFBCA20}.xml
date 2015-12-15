@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\GitHubProjects\SpaceWars\SpaceWars\Content\space.xnb</Output>
-      <Time>2015-12-13T12:55:53.0345546+02:00</Time>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\space.xnb</Output>
+      <Time>2015-12-13T22:48:58.9877954+02:00</Time>
     </Item>
     <Item>
       <Source>ship.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\GitHubProjects\SpaceWars\SpaceWars\Content\ship.xnb</Output>
-      <Time>2015-12-13T12:55:53.0330534+02:00</Time>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\ship.xnb</Output>
+      <Time>2015-12-13T22:48:58.9867938+02:00</Time>
     </Item>
     <Item>
       <Source>laser.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\GitHubProjects\SpaceWars\SpaceWars\Content\laser.xnb</Output>
-      <Time>2015-12-13T12:55:53.020545+02:00</Time>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\laser.xnb</Output>
+      <Time>2015-12-13T22:48:58.9778485+02:00</Time>
     </Item>
     <Item>
       <Source>asteroid.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\GitHubProjects\SpaceWars\SpaceWars\Content\asteroid.xnb</Output>
-      <Time>2015-12-13T12:55:53.0195447+02:00</Time>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\asteroid.xnb</Output>
+      <Time>2015-12-13T22:48:58.9778485+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -44,10 +44,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\GitHubProjects\SpaceWars\SpaceWarsContent\</RootDirectory>
-      <LoggerRootDirectory>C:\GitHubProjects\SpaceWars\SpaceWars\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\GitHubProjects\SpaceWars\SpaceWars\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\GitHubProjects\SpaceWars\SpaceWars\Content\</OutputDirectory>
+      <RootDirectory>F:\Softuni\Game\Game\SpaceWars\SpaceWarsContent\</RootDirectory>
+      <LoggerRootDirectory>F:\Softuni\Game\Game\SpaceWars\SpaceWars\</LoggerRootDirectory>
+      <IntermediateDirectory>F:\Softuni\Game\Game\SpaceWars\SpaceWars\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -76,7 +76,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2015-12-04T04:17:16.4839176+02:00</Value>
+        <Value>2015-11-30T02:00:11.6018185+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

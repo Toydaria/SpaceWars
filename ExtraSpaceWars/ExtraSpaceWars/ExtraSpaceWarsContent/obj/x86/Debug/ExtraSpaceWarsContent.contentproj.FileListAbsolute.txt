@@ -1,1 +1,2 @@
 F:\Softuni\Game\Game\ExtraSpaceWars\ExtraSpaceWars\ExtraSpaceWarsContent\obj\x86\Debug\ExtraSpaceWarsContent.contentprojResolveAssemblyReference.cache
+F:\Softuni\Game\Game\SpaceWars\ExtraSpaceWars\ExtraSpaceWars\ExtraSpaceWarsContent\obj\x86\Debug\ExtraSpaceWarsContent.contentprojResolveAssemblyReference.cache

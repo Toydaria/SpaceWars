@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceWars.Model
 {
-    class BigEnemy: Enemy
+    class BigEnemy
     {
     }
 }

@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Softuni\Game\Game\ExtraSpaceWars\ExtraSpaceWars\ExtraSpaceWars\bin\x86\Debug\Content\Textures\SpaceBack.xnb</Output>
+      <Output>F:\Softuni\Game\Game\SpaceWars\ExtraSpaceWars\ExtraSpaceWars\ExtraSpaceWars\bin\x86\Debug\Content\Textures\SpaceBack.xnb</Output>
       <Time>2015-12-08T19:53:14.4774396+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -17,10 +17,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>F:\Softuni\Game\Game\ExtraSpaceWars\ExtraSpaceWars\ExtraSpaceWarsContent\</RootDirectory>
-      <LoggerRootDirectory>F:\Softuni\Game\Game\ExtraSpaceWars\ExtraSpaceWars\ExtraSpaceWars\</LoggerRootDirectory>
-      <IntermediateDirectory>F:\Softuni\Game\Game\ExtraSpaceWars\ExtraSpaceWars\ExtraSpaceWars\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>F:\Softuni\Game\Game\ExtraSpaceWars\ExtraSpaceWars\ExtraSpaceWars\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>F:\Softuni\Game\Game\SpaceWars\ExtraSpaceWars\ExtraSpaceWars\ExtraSpaceWarsContent\</RootDirectory>
+      <LoggerRootDirectory>F:\Softuni\Game\Game\SpaceWars\ExtraSpaceWars\ExtraSpaceWars\ExtraSpaceWars\</LoggerRootDirectory>
+      <IntermediateDirectory>F:\Softuni\Game\Game\SpaceWars\ExtraSpaceWars\ExtraSpaceWars\ExtraSpaceWars\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>F:\Softuni\Game\Game\SpaceWars\ExtraSpaceWars\ExtraSpaceWars\ExtraSpaceWars\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
