@@ -24,9 +24,16 @@ namespace SpaceWars.GameObjects
 
         public Bullet(Vector2 position)
         {
+<<<<<<< HEAD
             Speed = UP;
             Position = position;
             BoundingBox = new Rectangle((int)position.X,(int)position.Y, 5, 5);
+=======
+            texture = null;
+            speed = 15;
+            isVisible = false;
+            Damage = 30;//TODO: hardcoded value to change
+>>>>>>> 0c4448ba661d6cf429691f3cabc5a0374de6390f
         }
 
         public override void Intersect(IGameObject obj)

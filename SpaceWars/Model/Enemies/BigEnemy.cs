@@ -8,7 +8,7 @@ using SpaceWars.Interfaces;
 
 namespace SpaceWars.Model
 {
-    class BigEnemy: Enemy
+    class BigEnemy
     {
         public override void Intersect(IGameObject obj)
         {

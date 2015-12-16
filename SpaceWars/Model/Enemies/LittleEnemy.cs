@@ -9,7 +9,11 @@ using SpaceWars.Interfaces;
 
 namespace SpaceWars.Model
 {
+<<<<<<< HEAD
     public class LittleEnemy: Enemy
+=======
+    class LittleEnemy
+>>>>>>> 0c4448ba661d6cf429691f3cabc5a0374de6390f
     {
         public override void Intersect(IGameObject obj)
         {
