@@ -20,21 +20,24 @@ namespace SpaceWars.GameObjects
         private const int RightCorner = 700;
         private const int UpCorner = 0;
         private const int DownCorner = 1000;
-        
+
+        private int speed;
+
+        private Texture2D texture;
 
         public Bullet(Vector2 position)
         {
-<<<<<<< HEAD
             Speed = UP;
             Position = position;
             BoundingBox = new Rectangle((int)position.X,(int)position.Y, 5, 5);
-=======
             texture = null;
             speed = 15;
-            isVisible = false;
+            IsVisible = false;
             Damage = 30;//TODO: hardcoded value to change
->>>>>>> 0c4448ba661d6cf429691f3cabc5a0374de6390f
         }
+
+        public bool IsVisible { get; set; }
+        public int Damage { get; set; }
 
         public override void Intersect(IGameObject obj)
         {

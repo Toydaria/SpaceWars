@@ -24,7 +24,7 @@ namespace SpaceWars.GameObjects.AsteroidsPack
         /// </summary>
         private new const int damage = 30;
         
-        public ChunkyAsteroid()
+        public ChunkyAsteroid() : base(damage)
         {
             Random rand = new Random();
 
@@ -41,7 +41,8 @@ namespace SpaceWars.GameObjects.AsteroidsPack
             if (obj.GetType() == typeof(Player))
             {
                 Player player = (Player)obj;
-                // make dmg to player
+                player.Health -= damage;
+                
             }
         }
 

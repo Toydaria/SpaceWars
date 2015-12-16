@@ -23,14 +23,14 @@ namespace SpaceWars.GameObjects.AsteroidsPack
         /// </summary>
         private new const int damage = 20;
 
-        public RedFartAsteroid()
+        public RedFartAsteroid() : base(damage)
         {
             Random rand = new Random();
 
             Position = new Vector2(rand.Next(LeftCorner, RightCorner), UpCorner);
             Speed = new Vector2(rand.Next(MinXVelocity, MaxXVelocity), rand.Next(MinYVelocity, MaxYVelocity));
 
-            BoundingBox = new Rectangle((int)Position.X, (int)Position.Y, TextureWidth, TextureHeight);
+            BoundingBox = new Rectangle((int)Position.X - TextureWidth, (int)Position.Y - TextureHeight, TextureWidth, TextureHeight);
         }
 
         public override void Intersect(IGameObject obj)
@@ -38,7 +38,7 @@ namespace SpaceWars.GameObjects.AsteroidsPack
             if (obj.GetType() == typeof(Player))
             {
                 Player player = (Player)obj;
-                // make dmg to player
+                player.Health -= damage;
             }
         }
 

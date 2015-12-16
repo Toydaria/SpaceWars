@@ -9,6 +9,7 @@ namespace SpaceWars
     {
 
         private Dictionary<string, Texture2D> resources = new Dictionary<string, Texture2D>();
+        private SpriteFont resource;
 
 
         public void LoadContent(Microsoft.Xna.Framework.Content.ContentManager content)
@@ -18,6 +19,12 @@ namespace SpaceWars
             resources["asteroid"] = content.Load<Texture2D>("asteroid");
             resources["rocky"] = content.Load<Texture2D>("rocky");
             resources["redfart"] = content.Load<Texture2D>("redfart");
+            resource = content.Load<SpriteFont>("spritefont");
+        }
+
+        public SpriteFont GetSpriteFont()
+        {
+            return resource;
         }
 
         public Texture2D GetResource(string resourceName)

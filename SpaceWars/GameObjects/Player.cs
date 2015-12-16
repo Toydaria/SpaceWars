@@ -31,6 +31,9 @@ namespace SpaceWars.GameObjects
         private Vector2 rightTemp;
 
 
+        private Stringer Text = new Stringer(new Vector2(100, 100));
+
+
         private int health;
         private int damage;
         private int elapsedShootTime = 0;
@@ -47,19 +50,39 @@ namespace SpaceWars.GameObjects
             Damage = 100;//TODO: hardcoded value to change
         }
 
-        public int Health { get; set; }
+        public int Health
+        {
+            get { return this.health; }
+
+            set
+            {
+                if (value < 0)
+                {
+                    this.health = 0;
+                }
+                this.health = value;
+            }
+        }
         public int Damage { get; set; }
         public int Shield { get; set; }
 
         public override void LoadContent(ResourceManager resourceManager)
         {
+            Text.LoadContent(resourceManager);
             Texture = resourceManager.GetResource("ship");
         }
+
+        
 
         public override void Think(GameTime gameTime)
         {
             //Getting the keyboardState
             KeyboardState keyboard = Keyboard.GetState();
+
+            this.BoundingBox = new Rectangle((int)Position.X, (int)Position.Y, Texture.Width, Texture.Height);
+
+            //Draw Text
+            Text.Text = "Health: " + Health;
 
             //Player Controls
             if (keyboard.IsKeyDown(Keys.A) && Position.X > LeftCorner)
@@ -117,6 +140,7 @@ namespace SpaceWars.GameObjects
 
         public override void Draw(SpriteBatch spriteBatch)
         {
+            Text.Draw(spriteBatch);
             spriteBatch.Draw(Texture, Position, Color.White);
         }
 

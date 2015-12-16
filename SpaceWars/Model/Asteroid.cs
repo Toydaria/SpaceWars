@@ -24,26 +24,27 @@ namespace SpaceWars.GameObjects
         protected Vector2 origin;
         protected float rotationAngle = rand.Next(0, 180);
 
-        public Asteroid()
+        public Asteroid(int damage)
         {
             Random rand = new Random();
 
+            this.Damage = damage;
             Position = new Vector2(rand.Next(LeftCorner, RightCorner), UpCorner);
             Speed = new Vector2(rand.Next(MinXVelocity, MaxXVelocity), rand.Next(MinYVelocity, MaxYVelocity));
             BoundingBox = new Rectangle((int)Position.X, (int)Position.Y, TextureWidth, TextureHeight);
         }
 
-        public int Damage { get;}
+        public int Damage { get; private set; }
 
         public override void Intersect(IGameObject obj)
         {
             if (obj.GetType() == typeof(Player))
             {
                 Player player = (Player)obj;
-                // make dmg to player
+                player.Health -= Damage;
             }
         }
-
+        
         public override void LoadContent(ResourceManager resourceManager)
         {
             Texture = resourceManager.GetResource("asteroid");
@@ -74,6 +75,9 @@ namespace SpaceWars.GameObjects
             {
                 Owner.RemoveObject(this);
             }
+
+            origin.X = Texture.Width / 2f;
+            origin.Y = Texture.Height / 2f;
         }
 
         private void Rotate(GameTime gameTime)
@@ -86,8 +90,6 @@ namespace SpaceWars.GameObjects
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            origin.X = Texture.Width / 2f;
-            origin.Y = Texture.Height / 2f;
             spriteBatch.Draw(Texture, Position, null, Color.White, rotationAngle, origin, 1.0f, SpriteEffects.None, 0f);
         }
     }       

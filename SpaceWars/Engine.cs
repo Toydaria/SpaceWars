@@ -28,7 +28,7 @@ namespace SpaceWars
             Content.RootDirectory = "Content";
         }
         // Game Enemy
-        List<Enemy> enemies = new List<Enemy>();
+        //List<Enemy> enemies = new List<Enemy>();
         Random random = new Random();
 
 
@@ -61,11 +61,12 @@ namespace SpaceWars
         float spawn = 0;
         protected override void Update(GameTime gameTime)
         {
-            spawn += (float) gameTime.ElapsedGameTime.TotalSeconds;
-            foreach (Enemy enemy in enemies)
-            {
-                enemy.Update(graphics.GraphicsDevice);
-            }
+            spawn += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            //foreach (Enemy enemy in enemies)
+            //{
+            //    enemy.Update(graphics.GraphicsDevice);
+            //}
+
             //Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
@@ -80,20 +81,20 @@ namespace SpaceWars
             if (spawn >= 1)
             {
                 spawn = 0;
-                if (enemies.Count() < 4)
-                {
-                    enemies.Add(new Enemy(Content.Load<Texture2D>("ship"),new Vector2(60, randY)));
-                }
+                //if (enemies.Count() < 4)
+                //{
+                //    enemies.Add(new Enemy(Content.Load<Texture2D>("ship"), new Vector2(60, randY)));
+                //}
             }
 
-            for (int i = 0; i < enemies.Count; i++)
-            {
-                if (!enemies[i].isVisible)
-                {
-                    enemies.RemoveAt(i);
-                    i--;
-                }
-            }
+            //for (int i = 0; i < enemies.Count; i++)
+            //{
+            //    if (!enemies[i].isVisible)
+            //    {
+            //        enemies.RemoveAt(i);
+            //        i--;
+            //    }
+            //}
         }
 
         protected override void Draw(GameTime gameTime)
@@ -103,7 +104,7 @@ namespace SpaceWars
             spriteBatch.Begin();
             ScreenManager.Instance.Draw(spriteBatch);
             spriteBatch.End();
-            
+
             base.Draw(gameTime);
         }
     }
