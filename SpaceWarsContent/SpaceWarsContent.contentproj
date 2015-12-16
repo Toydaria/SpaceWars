@@ -58,11 +58,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="chunky.png">
-      <Name>chunky</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="redfart.png">
       <Name>redfart</Name>
       <Importer>TextureImporter</Importer>
