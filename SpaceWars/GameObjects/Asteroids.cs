@@ -100,6 +100,7 @@
                     asteroidList.RemoveAt(i);
                     i--;
                 }
+
             }
         }
     }

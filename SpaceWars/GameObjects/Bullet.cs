@@ -1,117 +1,77 @@
-﻿namespace SpaceWars.GameObjects
+﻿using System.Linq;
+using System.Reflection;
+using SpaceWars.Interfaces;
+using SpaceWars.Model;
+
+namespace SpaceWars.GameObjects
 {
     using System.Collections.Generic;
 
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Content;
+    using AsteroidsPack;
 
-    public class Bullet
+    public class Bullet: GameObject
     {
-        private Texture2D texture;
-        private Vector2 origin;
-        private float speed;
-        private int bulletDelay = 20;
-        private int damage;
-        private int bulletsCount;
-        
-        public Rectangle boundingBox;
-        public bool isVisible;
-        public List<Bullet> bulletList = new List<Bullet>();
-        public Vector2 position;
+
+        private static readonly Vector2 UP = new Vector2(0, -30);
+        private const int LeftCorner = 0;
+        private const int RightCorner = 700;
+        private const int UpCorner = 0;
+        private const int DownCorner = 1000;
         
 
-        //Constructer
-        public Bullet()
+        public Bullet(Vector2 position)
         {
-            texture = null;
-            speed = 10;
-            isVisible = false;
-            Damage = 30;//TODO: hardcoded value to change
+            Speed = UP;
+            Position = position;
+            BoundingBox = new Rectangle((int)position.X,(int)position.Y, 5, 5);
         }
 
-        public int Damage { get; set; }
-
-
-        //LoadContent
-        public void LoadContent(ContentManager Content)
+        public override void Intersect(IGameObject obj)
         {
-            texture = Content.Load<Texture2D>("laser");
-        }
-
-        //UnloadContent
-        public void UnloadContent()
-        {
-        }
-
-        //Update
-        public void Update(GameTime gameTime)
-        {
-            
-        }
-
-        //Draw
-        public void Draw(SpriteBatch spriteBatch)
-        {
-            foreach (Bullet bullet in bulletList)
+            //if (obj.GetType() == typeof(ChunkyAsteroid))
+            //{
+            //    ChunkyAsteroid asteroid = (ChunkyAsteroid)obj;
+            //    Owner.RemoveObject(asteroid);
+            //    Owner.RemoveObject(this);
+            //}
+            if (obj is IAsteroid)
             {
-                spriteBatch.Draw(bullet.texture, bullet.position, Color.White);
-            }
-        }
-
-        //Shoot Method: Set the bullet position infront of the ship
-        public void Shoot()
-        {
-            if (bulletDelay >= 0)
-            {
-                bulletDelay--;
+                var asteroid = (Asteroid) obj;
+                Owner.RemoveObject(asteroid);
+                Owner.RemoveObject(this);
             }
 
-            if (bulletDelay <= 0)
-            {
-                Bullet newBullet = new Bullet();
-                newBullet.texture = this.texture;
-                newBullet.position = new Vector2(Player.position.X + 32 - newBullet.texture.Width / 2, Player.position.Y + 30);
-                newBullet.isVisible = true;
-
-                
-                if (bulletList.Count < 20)
-                {
-                    bulletList.Add(newBullet);
-                    bulletsCount--;
-                }
-            }
-
-            //Set bulletDelay back
-            if (bulletDelay <= 0)
-            {
-                bulletDelay = 20;
-            }
         }
 
-        //Update bullet function
-        public void UpdateBullets()
+        public override void LoadContent(ResourceManager resourceManager)
         {
-            foreach (Bullet b in bulletList)
-            {
-                b.boundingBox = new Rectangle((int)b.position.X, (int)b.position.Y, b.texture.Width, b.texture.Height);
-                b.position.Y = b.position.Y - b.speed;
-
-                if (b.position.Y <= 0)
-                {
-                    b.isVisible = false;
-                }
-            }
-
-            for (int i = 0; i < bulletList.Count; i++)
-            {
-                if (!bulletList[i].isVisible)
-                {
-                    bulletList.RemoveAt(i);
-                    i--;
-
-                }
-            }
+            Texture = resourceManager.GetResource("laser");
         }
+
+        public override void Think(GameTime gameTime)
+        {
+            bool needToRemove = false;
+
+            if (Position.X < LeftCorner)
+                needToRemove = true;
+            if (Position.X > RightCorner)
+                needToRemove = true;
+            if (Position.Y > DownCorner)
+                needToRemove = true;
+            if (Position.Y < UpCorner)
+                needToRemove = true;
+
+            if (needToRemove)
+                Owner.RemoveObject(this);
+        }
+
+
+
+
+        
+
     }
 }

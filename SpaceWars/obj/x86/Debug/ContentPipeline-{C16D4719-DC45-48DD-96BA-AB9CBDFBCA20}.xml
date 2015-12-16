@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\GitHubProjects\SpaceWars\SpaceWars\Content\space.xnb</Output>
+      <Output>C:\Users\Stef\Desktop\SpaceWars\SpaceWars\Content\space.xnb</Output>
       <Time>2015-12-13T12:55:53.0345546+02:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\GitHubProjects\SpaceWars\SpaceWars\Content\ship.xnb</Output>
+      <Output>C:\Users\Stef\Desktop\SpaceWars\SpaceWars\Content\ship.xnb</Output>
       <Time>2015-12-13T12:55:53.0330534+02:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\GitHubProjects\SpaceWars\SpaceWars\Content\laser.xnb</Output>
+      <Output>C:\Users\Stef\Desktop\SpaceWars\SpaceWars\Content\laser.xnb</Output>
       <Time>2015-12-13T12:55:53.020545+02:00</Time>
     </Item>
     <Item>
@@ -34,8 +34,26 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\GitHubProjects\SpaceWars\SpaceWars\Content\asteroid.xnb</Output>
-      <Time>2015-12-13T12:55:53.0195447+02:00</Time>
+      <Output>C:\Users\Stef\Desktop\SpaceWars\SpaceWars\Content\asteroid.xnb</Output>
+      <Time>2015-12-16T18:26:27.3055842+02:00</Time>
+    </Item>
+    <Item>
+      <Source>redfart.png</Source>
+      <Name>redfart</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stef\Desktop\SpaceWars\SpaceWars\Content\redfart.xnb</Output>
+      <Time>2015-12-16T18:39:52.2554107+02:00</Time>
+    </Item>
+    <Item>
+      <Source>rocky.png</Source>
+      <Name>rocky</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stef\Desktop\SpaceWars\SpaceWars\Content\rocky.xnb</Output>
+      <Time>2015-12-16T18:39:52.3174132+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -44,10 +62,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\GitHubProjects\SpaceWars\SpaceWarsContent\</RootDirectory>
-      <LoggerRootDirectory>C:\GitHubProjects\SpaceWars\SpaceWars\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\GitHubProjects\SpaceWars\SpaceWars\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\GitHubProjects\SpaceWars\SpaceWars\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Stef\Desktop\SpaceWars\SpaceWarsContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Stef\Desktop\SpaceWars\SpaceWars\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Stef\Desktop\SpaceWars\SpaceWars\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Stef\Desktop\SpaceWars\SpaceWars\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -75,8 +93,8 @@
         <Value>2011-09-01T17:22:30+03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2015-12-04T04:17:16.4839176+02:00</Value>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-11-30T14:32:00.6609501+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

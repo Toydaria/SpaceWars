@@ -5,15 +5,49 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Content;
+using SpaceWars.Interfaces;
+
+using SpaceWars.Model;
 
 namespace SpaceWars.GameObjects.AsteroidsPack
 {
     class ChunkyAsteroid : Asteroid
     {
-        private const int ChunkyAsteroidDamage = 30;
-
-        public ChunkyAsteroid(ContentManager content) : base(content, "chunky", new Vector2(randomPicker.Next(0, 780), -50), new Vector2(0, 5), ChunkyAsteroidDamage)
+        private new const int TextureWidth = 38;
+        private new const int TextureHeight = 38;
+        private new const int MinXVelocity = -3;
+        private new const int MaxXVelocity = 3;
+        private new const int MinYVelocity = 2;
+        private new const int MaxYVelocity = 9;
+        /// <summary>
+        /// TODO hardcoded damage 
+        /// </summary>
+        private new const int damage = 30;
+        
+        public ChunkyAsteroid()
         {
+            Random rand = new Random();
+
+            Position = new Vector2(rand.Next(LeftCorner, RightCorner), UpCorner);
+            Speed = new Vector2(rand.Next(MinXVelocity, MaxXVelocity), rand.Next(MinYVelocity, MaxYVelocity));
+            
+            BoundingBox = new Rectangle((int)Position.X, (int)Position.Y, TextureWidth, TextureHeight);
+        }
+
+        
+
+        public override void Intersect(IGameObject obj)
+        {
+            if (obj.GetType() == typeof(Player))
+            {
+                Player player = (Player)obj;
+                // make dmg to player
+            }
+        }
+
+        public override void LoadContent(ResourceManager resourceManager)
+        {
+            Texture = resourceManager.GetResource("asteroid");
         }
 
     }

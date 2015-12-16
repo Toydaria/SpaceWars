@@ -1,4 +1,5 @@
-﻿using SpaceWars.Model;
+﻿using SpaceWars.Interfaces;
+using SpaceWars.Model;
 
 namespace SpaceWars.GameObjects
 {
@@ -8,22 +9,40 @@ namespace SpaceWars.GameObjects
     using Microsoft.Xna.Framework.Content;
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
+    using SpaceWars;
 
     public class Player: GameObject
     {
-        private Texture2D texture;
-        private float speed;
-        public Bullet bullet = new Bullet();
+        private static readonly Vector2 UP = new Vector2(0, -10);
+        private static readonly Vector2 DOWN = new Vector2(0, 10);
+        private static readonly Vector2 LEFT = new Vector2(-10,0);
+        private static readonly Vector2 RIGHT = new Vector2(10,0);
+        private static readonly Vector2 ZERO = new Vector2(0, 0);
+        private const int LeftCorner = 0;
+        private const int RightCorner = 800 - 64; // Screen width - ship width
+        private const int UpCorner = 0;
+        private const int DownCorner = 950 - 64; // Screen height - ship height
+        private const int ShootInterval = 120;
+
+
+        private Vector2 upTemp;
+        private Vector2 downTemp;
+        private Vector2 leftTemp;
+        private Vector2 rightTemp;
+
+
         private int health;
         private int damage;
-        public static Vector2 position;
-        public Rectangle boundingBox;
+        private int elapsedShootTime = 0;
+        
+        
 
         public Player()
         {
-            texture = null;
-            position = new Vector2(350, 890);
-            speed = 10;
+            Texture = null;
+            Position = new Vector2(350, 890);
+            this.BoundingBox = new Rectangle(350, 890, 64, 64);
+            Speed = new Vector2(0,0);
             Health = 100;//TODO: hardcoded value to change
             Damage = 100;//TODO: hardcoded value to change
         }
@@ -32,60 +51,80 @@ namespace SpaceWars.GameObjects
         public int Damage { get; set; }
         public int Shield { get; set; }
 
-        public void LoadContent(ContentManager Content)
+        public override void LoadContent(ResourceManager resourceManager)
         {
-            bullet.LoadContent(Content);
-            texture = Content.Load<Texture2D>("ship");
+            Texture = resourceManager.GetResource("ship");
         }
 
-        public void UnloadContent()
-        {
-        }
-
-        public void Update(GameTime gameTime)
+        public override void Think(GameTime gameTime)
         {
             //Getting the keyboardState
             KeyboardState keyboard = Keyboard.GetState();
 
             //Player Controls
-            if (keyboard.IsKeyDown(Keys.A) && position.X - speed > -10)
+            if (keyboard.IsKeyDown(Keys.A) && Position.X > LeftCorner)
             {
-                position.X -= speed;
+                leftTemp = LEFT;
+            }
+            else
+            {
+                leftTemp = ZERO;
             }
 
-            if (keyboard.IsKeyDown(Keys.D) && position.X + speed < GraphicsDeviceManager.DefaultBackBufferWidth - 54)
+            if (keyboard.IsKeyDown(Keys.D) && Position.X < RightCorner)
             {
-                position.X += speed;
+                rightTemp = RIGHT;
+            }
+            else
+            {
+                rightTemp = ZERO;
             }
 
-            if (keyboard.IsKeyDown(Keys.W) && position.Y - speed > 0)
+            if (keyboard.IsKeyDown(Keys.W) && Position.Y > UpCorner)
             {
-                position.Y -= speed;
+                upTemp = UP;
+            }
+            else
+            {
+                upTemp = ZERO;
             }
 
-            if (keyboard.IsKeyDown(Keys.S) && position.Y + speed < 900)
+            if (keyboard.IsKeyDown(Keys.S) && Position.Y < DownCorner)
             {
-                position.Y += speed;
+                downTemp = DOWN;
+            }
+            else
+            {
+                downTemp = ZERO;
             }
 
-            if (keyboard.IsKeyDown(Keys.Space))
-            {
-                bullet.Shoot();
-            }
+            Speed = leftTemp + rightTemp + upTemp + downTemp;
 
-            //Bullets Controls
-            if (keyboard.IsKeyDown(Keys.Space))
-            {
-                bullet.Shoot();
-            }
+            elapsedShootTime += gameTime.ElapsedGameTime.Milliseconds;
 
-            bullet.UpdateBullets();
+            if (keyboard.IsKeyDown(Keys.Space) && elapsedShootTime > ShootInterval)
+            {
+                elapsedShootTime = 0;
+                Shoot();
+            }
+  
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public override void Intersect(IGameObject obj)
         {
-            spriteBatch.Draw(texture, position, Color.White);
-            bullet.Draw(spriteBatch);
+            
+        }
+
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(Texture, Position, Color.White);
+        }
+
+        void Shoot()
+        {
+            Owner.AddObject(new Bullet(Position));
         }
     }
+
+    
 }

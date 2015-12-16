@@ -7,10 +7,8 @@ using System.Text;
 
 namespace SpaceWars.Interfaces
 {
-    interface IAsteroid
+    public interface IAsteroid
     {
-        Vector2 Origin { get; }
-        string Asset { get; }
-        int Damage { get; set; }
+        int Damage { get; }
     }
 }

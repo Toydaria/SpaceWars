@@ -9,46 +9,74 @@ namespace SpaceWars.GameObjects
 {
     public abstract class Asteroid : GameObject, IAsteroid
     {
-        protected static Random randomPicker = new Random();
-        protected float rotationAngle = randomPicker.Next(0, 180);
+        protected const int TextureWidth = 38; 
+        protected const int TextureHeight = 38; 
+        protected const int UpCorner = - TextureWidth; // asteroid size
+        protected const int RightCorner = 800 - TextureWidth; // Screen width - asteroid width
+        protected const int DownCorner = 950 - TextureHeight; // Screen height - asteroid height
+        protected const int LeftCorner = 0;
+        protected const int MinXVelocity = -12;
+        protected const int MaxXVelocity = 12;
+        protected const int MinYVelocity = -9;
+        protected const int MaxYVelocity = 9;
+        protected int damage;
+        protected static Random rand = new Random();
         protected Vector2 origin;
+        protected float rotationAngle = rand.Next(0, 180);
 
-        protected Asteroid(ContentManager content, string asset, Vector2 position, Vector2 speed, int damage)
+        public Asteroid()
         {
-            this.Texture = content.Load<Texture2D>(asset);
-            this.Position = position;
-            this.Speed = speed;
-            this.Damage = damage;
+            Random rand = new Random();
+
+            Position = new Vector2(rand.Next(LeftCorner, RightCorner), UpCorner);
+            Speed = new Vector2(rand.Next(MinXVelocity, MaxXVelocity), rand.Next(MinYVelocity, MaxYVelocity));
+            BoundingBox = new Rectangle((int)Position.X, (int)Position.Y, TextureWidth, TextureHeight);
         }
 
-        public int Health { get; set; }
-        public string Asset { get; protected set; }
-        public int Damage { get; set; }
-        public Vector2 Origin { get; set; }
-       
-        public virtual void LoadContent(ContentManager content)
+        public int Damage { get;}
+
+        public override void Intersect(IGameObject obj)
         {
-            this.Texture = content.Load<Texture2D>(this.Asset);
+            if (obj.GetType() == typeof(Player))
+            {
+                Player player = (Player)obj;
+                // make dmg to player
+            }
         }
 
-        public void Update(GameTime gameTime)
+        public override void LoadContent(ResourceManager resourceManager)
         {
-            Think(gameTime);
-            Move();
-            //check for collision??
+            Texture = resourceManager.GetResource("asteroid");
         }
 
-        public void Move()
+        public override void Think(GameTime gameTime)
         {
-            this.Position += this.Speed;
-        }
+            bool needToRemove = false;
 
-        public void Think(GameTime gameTime)
-        {
+            if (Position.Y > DownCorner + TextureHeight) // asteroid size
+            {
+                needToRemove = true;
+            }
+            if (Position.X < LeftCorner - TextureWidth) // asteroid size
+            {
+                needToRemove = true;
+            }
+            if (Position.X > RightCorner + TextureWidth) // asteroid size
+            {
+                needToRemove = true;
+            }
+            if (Position.Y < UpCorner) // asteroid size
+            {
+                needToRemove = true;
+            }
             Rotate(gameTime);
+            if (needToRemove)
+            {
+                Owner.RemoveObject(this);
+            }
         }
 
-        protected void Rotate(GameTime gameTime)
+        private void Rotate(GameTime gameTime)
         {
             float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
             rotationAngle += elapsed;
@@ -56,24 +84,11 @@ namespace SpaceWars.GameObjects
             rotationAngle = rotationAngle % cirlce;
         }
 
-        //public void Intersect(Player player)
-        //{
-        //    this.BoundingBox = new Rectangle((int)Position.X, (int)Position.Y, this.Texture.Width, this.Texture.Height);
-        //    if (this.BoundingBox.Intersects(player.BoundingBox))
-        //    {
-        //        this.Intersect(player);
-        //        player.Health -= this.Damage;
-        //    }
-        //    //TODO: not implemented
-        //}
-
-        public void Draw(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             origin.X = Texture.Width / 2f;
             origin.Y = Texture.Height / 2f;
             spriteBatch.Draw(Texture, Position, null, Color.White, rotationAngle, origin, 1.0f, SpriteEffects.None, 0f);
         }
-
-
     }       
 }
