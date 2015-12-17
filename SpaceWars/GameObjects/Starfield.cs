@@ -8,9 +8,8 @@
 
     public class Starfield
     {
-        public Texture2D texture;
-        public Vector2 bgPos1, bgPos2;
-        public int speed;
+        private Texture2D texture;
+        private Vector2 bgPos1, bgPos2;
 
         //Constructor
         public Starfield()
@@ -18,8 +17,10 @@
             texture = null;
             bgPos1 = new Vector2(0, 0);
             bgPos2 = new Vector2(0, -950);
-            speed = 5;
+            Speed = 5;
         }
+
+        public int Speed { get; set; }
 
         //Load Content
         public void LoadContent(ContentManager Content)
@@ -31,18 +32,11 @@
         {
         }
 
-        //Draw
-        public void Draw(SpriteBatch spriteBatch)
-        {
-            spriteBatch.Draw(texture, bgPos1, Color.White);
-            spriteBatch.Draw(texture, bgPos2, Color.White);
-        }
-
         //Update
         public void Update(GameTime gameTime)
         {
-            bgPos1.Y = bgPos1.Y + speed;
-            bgPos2.Y = bgPos2.Y + speed;
+            bgPos1.Y = bgPos1.Y + Speed;
+            bgPos2.Y = bgPos2.Y + Speed;
 
             // Scrolling the background (Repeating)
 
@@ -51,6 +45,13 @@
                 bgPos1.Y = 0;
                 bgPos2.Y = -950;
             }
+        }
+
+        //Draw
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(texture, bgPos1, Color.White);
+            spriteBatch.Draw(texture, bgPos2, Color.White);
         }
     }
 }

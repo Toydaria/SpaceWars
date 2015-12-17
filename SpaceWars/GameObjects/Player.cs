@@ -32,11 +32,14 @@ namespace SpaceWars.GameObjects
 
 
         private int elapsedShootTime = 0;
+        private const int MaxShield = 100;
+
+        private Stringer HealthText = new Stringer(new Vector2(50, 50));
+        private Stringer ShieldText = new Stringer(new Vector2(200, 50));
 
         public int Health { get; set; }
         public int MaxHealth { get; set; }
         public int Shield { get; set; }
-        public int MaxShield { get; set; }
         
         
 
@@ -47,6 +50,7 @@ namespace SpaceWars.GameObjects
             this.BoundingBox = new Rectangle(350, 890, 64, 64);
             Speed = new Vector2(0,0);
             MaxHealth = 100;
+
             Health = 100;//TODO: hardcoded value to change
             Damage = 100;//TODO: hardcoded value to change
         }
@@ -56,6 +60,12 @@ namespace SpaceWars.GameObjects
 
         public override void LoadContent(ResourceManager resourceManager)
         {
+            HealthText.LoadContent(resourceManager);
+            ShieldText.LoadContent(resourceManager);
+            //DONT REMOVE THIS
+            HealthText.Text = "Health: " + this.Health;
+            ShieldText.Text = "Shield: " + this.Shield;
+
             Texture = resourceManager.GetResource("ship");
         }
 
@@ -63,6 +73,11 @@ namespace SpaceWars.GameObjects
         {
             //Getting the keyboardState
             KeyboardState keyboard = Keyboard.GetState();
+
+            //Updating Text
+            HealthText.Text = "Health: " + this.Health;
+            ShieldText.Text = "Shield: " + this.Shield;
+            
 
             //Player Controls
             if (keyboard.IsKeyDown(Keys.A) && Position.X > LeftCorner)
@@ -120,12 +135,25 @@ namespace SpaceWars.GameObjects
 
         public void TakeDMG(int dmg)
         {
-            Health -= dmg;
-
-            if (Health < 0)
-                Destroy();
-            else if (Health > MaxHealth)
-                Health = MaxHealth;
+            int remainingDamage;
+            
+                if (Shield - dmg < 0)
+                {
+                    remainingDamage = dmg - Shield;
+                    Shield = 0;
+                    Health -= remainingDamage;
+                }
+                else
+                {
+                    Shield -= dmg;
+                }
+                if (Health <= 0)
+                {
+                    Health = 0;
+                    Destroy();
+                }
+                    
+                    //Change the screen to GameOver screen
         }
 
         public  void Destroy()
@@ -134,10 +162,12 @@ namespace SpaceWars.GameObjects
             // End of the game
         }
 
-        //public override void Draw(SpriteBatch spriteBatch)
-        //{
-        //    spriteBatch.Draw(Texture, Position, Color.White);
-        //}
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(Texture, Position, Color.White);
+            HealthText.Draw(spriteBatch);
+            ShieldText.Draw(spriteBatch);
+        }
 
         void Shoot()
         {
@@ -147,9 +177,14 @@ namespace SpaceWars.GameObjects
         public void AddShield(int amount)
         {
             if(Shield + amount > MaxShield)
+            {
                 Shield = MaxShield;
-            else 
+            }
+            else
+            {
                 Shield += amount;
+
+            }
         }
 
 

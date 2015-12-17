@@ -37,25 +37,32 @@
             }
         }
 
-        //public void ChangeScreen(string screenName)
-        //{
-        //    newScreen = new TestMenu();
-        //    xmlGameScreenManager = new XmlManager<GameScreen>();
-        //    xmlGameScreenManager.Type = newScreen.Type;
-        //    newScreen = xmlGameScreenManager.Load("Loads/" + screenName);
-        //    currentScreen = newScreen;
-        //    currentScreen.LoadContent(Content);
-        //    //newScreen = (GameScreen)Activator.CreateInstance(Type.GetType("Toydaria.Screens." + screenName));
-        //}
+        public void ChangeScreen(string screenName)
+        {
+            //newScreen = new TestMenu();
+            //xmlGameScreenManager = new XmlManager<GameScreen>();
+            //xmlGameScreenManager.Type = newScreen.Type;
+            //newScreen = xmlGameScreenManager.Load("Loads/" + screenName);
+            //currentScreen = newScreen;
+            //currentScreen.LoadContent(Content);
+            newScreen = ScreenFactory.CreateScreen(screenName);
+            //newScreen = (GameScreen)Activator.CreateInstance(Type.GetType("Toydaria.Screens." + screenName));
+            xmlGameScreenManager = new XmlManager<GameScreen>();
+            xmlGameScreenManager.Type = newScreen.Type;
+            currentScreen.UnloadContent();
+            currentScreen = xmlGameScreenManager.Load("Loads/" + screenName + ".xml");
+            currentScreen.LoadContent(Content);
+
+        }
 
 
         public ScreenManager()
         {
             Dimensions = new Vector2(800, 950);
-            currentScreen = new MainScreen();
+            currentScreen = new SplashScreen();
             xmlGameScreenManager = new XmlManager<GameScreen>();
             xmlGameScreenManager.Type = currentScreen.Type;
-            currentScreen = xmlGameScreenManager.Load("Loads/MainScreen.xml");
+            currentScreen = xmlGameScreenManager.Load("Loads/SplashScreen.xml");
         }
 
         public void LoadContent(ContentManager Content)

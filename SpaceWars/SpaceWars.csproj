@@ -72,6 +72,8 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameObjects\Image.cs" />
+    <Compile Include="GameObjects\Stringer.cs" />
     <Compile Include="Interfaces\IDestructible.cs" />
     <Compile Include="ResourceManager.cs" />
     <Compile Include="GameObjects\Asteroids.cs" />
@@ -101,6 +103,7 @@
     <Compile Include="Engine.cs" />
     <Compile Include="Screens\MainScreen.cs" />
     <Compile Include="Screens\ScreenManagement\GameScreen.cs" />
+    <Compile Include="Screens\ScreenManagement\ScreenFactory.cs" />
     <Compile Include="Screens\ScreenManagement\ScreenManager.cs" />
     <Compile Include="Screens\SplashScreen.cs" />
     <Compile Include="Xml\XmlManager.cs" />
@@ -111,6 +114,7 @@
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
     </Content>
     <Content Include="Loads\MainScreen.xml" />
+    <Content Include="Loads\SplashScreen.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpaceWarsContent\SpaceWarsContent.contentproj">

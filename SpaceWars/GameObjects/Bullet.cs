@@ -29,9 +29,9 @@ namespace SpaceWars.GameObjects
 
         public override void Intersect(IGameObject obj)
         {
-            if (obj.GetType() == typeof(ChunkyAsteroid))
+            if (obj is IAsteroid)
             {
-                ChunkyAsteroid asteroid = (ChunkyAsteroid)obj;
+                var asteroid = (Asteroid)obj;
                 Owner.RemoveObject(asteroid);
                 Owner.RemoveObject(this);
             }

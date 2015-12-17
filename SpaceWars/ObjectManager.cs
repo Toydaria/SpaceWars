@@ -1,24 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using SpaceWars.Interfaces;
-
-namespace SpaceWars
+﻿namespace SpaceWars
 {
+    using System;
+    using System.Collections.Generic;
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+
+    using SpaceWars.Interfaces;
+
     using SpaceWars.Model;
     using SpaceWars.GameObjects.AsteroidsPack;
+    using SpaceWars.GameObjects;
     using SpaceWars.Model.Bonuses;
    
 
     public class ObjectManager
     {
-
-
-
         List<IGameObject> objects = new List<IGameObject>();
         private int elapsedAsteroidTime = 0;
-        private const int AsteroidFieldPeriod = 50;
+        private const int AsteroidFieldPeriod = 80;
         private int elapsedBonusTime = 0;
         private const int BonusPeriod = 3750;
 
@@ -92,7 +91,7 @@ namespace SpaceWars
 
         public void Think(GameTime gametime)
         {
-            //CreateAsteroidField(gametime);
+            CreateAsteroidField(gametime);
             DropBonus(gametime);
 
             for (int i = 0; i < objects.Count; ++i)
@@ -110,12 +109,30 @@ namespace SpaceWars
         {
             elapsedAsteroidTime += gametime.ElapsedGameTime.Milliseconds;
 
-            if(elapsedAsteroidTime > AsteroidFieldPeriod)
+            if (elapsedAsteroidTime > AsteroidFieldPeriod)
             {
                 elapsedAsteroidTime = 0;
-                AddObject(new ChunkyAsteroid());
+                var asteroid = GetAsteroid();
+                AddObject(asteroid);
             }
         }
+
+        private Asteroid GetAsteroid()
+        {
+            Random randomAsteroid = new Random();
+            int index = randomAsteroid.Next(0, 3);
+            switch (index)
+            {
+                case 0:
+                    return new ChunkyAsteroid();
+                case 1:
+                    return new RockyAsteroid();
+                case 2:
+                    return new RedFartAsteroid();
+            }
+            return null;
+        }
+
 
         void DropBonus(GameTime gametime)
         {

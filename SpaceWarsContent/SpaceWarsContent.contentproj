@@ -58,6 +58,25 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="redfart.png">
+      <Name>redfart</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="rocky.png">
+      <Name>rocky</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="spritefont.spritefont">
+      <Name>spritefont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="ShieldBonus.png">
       <Name>ShieldBonus</Name>
       <Importer>TextureImporter</Importer>
@@ -67,6 +86,13 @@
   <ItemGroup>
     <Compile Include="HealthBonus.png">
       <Name>HealthBonus</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="startBackground.png">
+      <Name>startBackground</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
