@@ -9,8 +9,6 @@ namespace SpaceWars.Interfaces
     public interface IGameObject : IControl
     {
 
-        
-
         Texture2D Texture { get; set; }
 
         Vector2 Position { get; set; }
@@ -31,9 +29,5 @@ namespace SpaceWars.Interfaces
         void Draw(SpriteBatch spriteBatch);
 
         void LoadContent(ResourceManager resourceManager);
-
-
-
-
     }
 }

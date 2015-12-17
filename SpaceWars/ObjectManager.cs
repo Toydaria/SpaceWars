@@ -20,6 +20,8 @@
         private const int AsteroidFieldPeriod = 80;
         private int elapsedBonusTime = 0;
         private const int BonusPeriod = 3750;
+        private int elapsedEnemyTime = 0;
+        private const int EnemyPeriod = 4000;
 
 
         public ResourceManager ResourceMgr { get; set; }
@@ -53,7 +55,6 @@
             Move();
             CheckCollision();
             RemoveGarbage();
-
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -92,7 +93,10 @@
         public void Think(GameTime gametime)
         {
             CreateAsteroidField(gametime);
+
             DropBonus(gametime);
+
+            DropEnemy(gametime);
 
             for (int i = 0; i < objects.Count; ++i)
             {
@@ -157,6 +161,32 @@
                         break;
                 }
                 
+            }
+        }
+
+        void DropEnemy(GameTime gametime)
+        {
+            elapsedEnemyTime += gametime.ElapsedGameTime.Milliseconds;
+
+            if (elapsedEnemyTime > EnemyPeriod)
+            {
+                elapsedEnemyTime = 0;
+                Random rand = new Random(gametime.TotalGameTime.Seconds);
+                int choice = rand.Next(0, 5);
+
+                switch (choice)
+                {
+                    case 0:
+                        AddObject(new BigEnemy());
+                        break;
+                    case 1:
+                        AddObject(new LittleEnemy());
+                        break;
+                    default:
+                        // There is no bonus for you ... sorry
+                        break;
+                }
+
             }
         }
 

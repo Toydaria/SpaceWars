@@ -1,1 +1,2 @@
 C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWarsContent\obj\x86\Debug\SpaceWarsContent.contentprojResolveAssemblyReference.cache
+F:\Softuni\Game\Game\SpaceWars\SpaceWarsContent\obj\x86\Debug\SpaceWarsContent.contentprojResolveAssemblyReference.cache

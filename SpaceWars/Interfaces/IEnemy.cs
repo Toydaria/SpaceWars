@@ -7,5 +7,6 @@ namespace SpaceWars.Interfaces
 {
     public interface IEnemy
     {
+        void OnGetEnemy(IGameObject obj);
     }
 }

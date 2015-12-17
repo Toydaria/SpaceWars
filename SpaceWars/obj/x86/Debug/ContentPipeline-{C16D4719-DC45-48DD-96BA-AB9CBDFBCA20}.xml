@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWars\Content\space.xnb</Output>
-      <Time>2015-12-16T21:15:54.4138043+02:00</Time>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\space.xnb</Output>
+      <Time>2015-12-17T18:08:16.1517734+02:00</Time>
     </Item>
     <Item>
       <Source>ship.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWars\Content\ship.xnb</Output>
-      <Time>2015-12-16T21:15:54.4138043+02:00</Time>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\ship.xnb</Output>
+      <Time>2015-12-17T18:08:16.1507723+02:00</Time>
     </Item>
     <Item>
       <Source>laser.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWars\Content\laser.xnb</Output>
-      <Time>2015-12-16T21:15:54.4038043+02:00</Time>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\laser.xnb</Output>
+      <Time>2015-12-17T18:08:16.1417663+02:00</Time>
     </Item>
     <Item>
       <Source>asteroid.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWars\Content\asteroid.xnb</Output>
-      <Time>2015-12-16T21:15:54.4038043+02:00</Time>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\asteroid.xnb</Output>
+      <Time>2015-12-17T18:08:16.1387648+02:00</Time>
     </Item>
     <Item>
       <Source>redfart.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWars\Content\redfart.xnb</Output>
-      <Time>2015-12-16T21:15:54.4138043+02:00</Time>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\redfart.xnb</Output>
+      <Time>2015-12-17T18:08:16.1497716+02:00</Time>
     </Item>
     <Item>
       <Source>rocky.png</Source>
@@ -52,17 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWars\Content\rocky.xnb</Output>
-      <Time>2015-12-16T21:15:54.4138043+02:00</Time>
-    </Item>
-    <Item>
-      <Source>spritefont.spritefont</Source>
-      <Name>spritefont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWars\Content\spritefont.xnb</Output>
-      <Time>2015-12-16T22:19:59.6051606+02:00</Time>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\rocky.xnb</Output>
+      <Time>2015-12-17T18:08:16.1497716+02:00</Time>
     </Item>
     <Item>
       <Source>ShieldBonus.png</Source>
@@ -70,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWars\Content\ShieldBonus.xnb</Output>
-      <Time>2015-12-17T14:34:24.6584122+02:00</Time>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\ShieldBonus.xnb</Output>
+      <Time>2015-12-17T18:08:16.1247564+02:00</Time>
     </Item>
     <Item>
       <Source>HealthBonus.png</Source>
@@ -79,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWars\Content\HealthBonus.xnb</Output>
-      <Time>2015-12-17T14:45:31.8465732+02:00</Time>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\HealthBonus.xnb</Output>
+      <Time>2015-12-17T18:08:16.1247564+02:00</Time>
     </Item>
     <Item>
       <Source>startBackground.png</Source>
@@ -88,8 +79,35 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWars\Content\startBackground.xnb</Output>
-      <Time>2015-12-17T16:23:33.403317+02:00</Time>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\startBackground.xnb</Output>
+      <Time>2015-12-17T18:08:16.1557761+02:00</Time>
+    </Item>
+    <Item>
+      <Source>spritefont.spritefont</Source>
+      <Name>spritefont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\spritefont.xnb</Output>
+      <Time>2015-12-17T18:08:16.1547763+02:00</Time>
+    </Item>
+    <Item>
+      <Source>bigEnemy.png</Source>
+      <Name>bigEnemy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\bigEnemy.xnb</Output>
+      <Time>2015-12-17T19:31:39.2084109+02:00</Time>
+    </Item>
+    <Item>
+      <Source>littleEnemy.png</Source>
+      <Name>littleEnemy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\littleEnemy.xnb</Output>
+      <Time>2015-12-17T19:32:43.7683108+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -98,39 +116,39 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWarsContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWars\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWars\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWars\Content\</OutputDirectory>
+      <RootDirectory>F:\Softuni\Game\Game\SpaceWars\SpaceWarsContent\</RootDirectory>
+      <LoggerRootDirectory>F:\Softuni\Game\Game\SpaceWars\SpaceWars\</LoggerRootDirectory>
+      <IntermediateDirectory>F:\Softuni\Game\Game\SpaceWars\SpaceWars\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>F:\Softuni\Game\Game\SpaceWars\SpaceWars\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2011-09-01T16:22:30+03:00</Value>
+        <Value>2011-09-01T17:22:30+03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2011-09-01T16:22:30+03:00</Value>
+        <Value>2011-09-01T17:22:30+03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2011-09-01T16:22:30+03:00</Value>
+        <Value>2011-09-01T17:22:30+03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2011-09-01T16:22:30+03:00</Value>
+        <Value>2011-09-01T17:22:30+03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2011-09-01T16:22:30+03:00</Value>
+        <Value>2011-09-01T17:22:30+03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2011-09-01T16:22:30+03:00</Value>
+        <Value>2011-09-01T17:22:30+03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2015-10-25T01:06:21.9063294+03:00</Value>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-11-30T02:00:11.6018185+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

@@ -16,9 +16,6 @@ namespace SpaceWars.Model
         {
             OnGetBonus(obj);
         }
-
-       
+        
     }
-
-    
 }

@@ -4,7 +4,9 @@ Content\laser.xnb
 Content\asteroid.xnb
 Content\redfart.xnb
 Content\rocky.xnb
-Content\spritefont.xnb
 Content\ShieldBonus.xnb
 Content\HealthBonus.xnb
 Content\startBackground.xnb
+Content\spritefont.xnb
+Content\bigEnemy.xnb
+Content\littleEnemy.xnb

@@ -21,6 +21,8 @@ namespace SpaceWars
             resources["redfart"] = content.Load<Texture2D>("redfart");
             resources["ShieldBonus"] = content.Load<Texture2D>("ShieldBonus");
             resources["HealthBonus"] = content.Load<Texture2D>("HealthBonus");
+            resources["bigEnemy"] = content.Load<Texture2D>("bigEnemy");
+            resources["littleEnemy"] = content.Load<Texture2D>("littleEnemy");
             resource = content.Load<SpriteFont>("spritefont");
         }
 
