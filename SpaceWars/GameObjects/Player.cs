@@ -34,8 +34,8 @@ namespace SpaceWars.GameObjects
         private int elapsedShootTime = 0;
         private const int MaxShield = 100;
 
-        private Stringer HealthText = new Stringer(new Vector2(50, 50));
-        private Stringer ShieldText = new Stringer(new Vector2(200, 50));
+        private Stringer HealthText = new Stringer(new Vector2(300, 200));
+        private Stringer ShieldText = new Stringer(new Vector2(150, 200));
 
         public int Health { get; set; }
         public int MaxHealth { get; set; }

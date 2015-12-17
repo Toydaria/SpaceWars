@@ -36,7 +36,7 @@ namespace SpaceWars.Model
                 Player player = (Player)obj;
 
                 //Molq ako mojesh da napravish metod koito da e GiveHealth ili neshto takova.
-                player.TakeDMG(-100);
+                player.TakeDMG(+100);
 
                 Owner.RemoveObject(this);
             }
