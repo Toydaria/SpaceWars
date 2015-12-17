@@ -156,6 +156,11 @@ namespace SpaceWars.GameObjects
                     //Change the screen to GameOver screen
         }
 
+        public void GiveHealth(int amount)
+        {
+            Health += amount;
+        }
+
         public  void Destroy()
         {
             Owner.RemoveObject(this);
