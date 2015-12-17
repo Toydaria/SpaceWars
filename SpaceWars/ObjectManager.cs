@@ -21,7 +21,7 @@
         private int elapsedBonusTime = 0;
         private const int BonusPeriod = 3750;
         private int elapsedEnemyTime = 0;
-        private const int EnemyPeriod = 4000;
+        private const int EnemyPeriod = 3000;
 
 
         public ResourceManager ResourceMgr { get; set; }

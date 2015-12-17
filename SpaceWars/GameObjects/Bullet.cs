@@ -1,4 +1,5 @@
-﻿using SpaceWars.Interfaces;
+﻿using Microsoft.Xna.Framework.GamerServices;
+using SpaceWars.Interfaces;
 using SpaceWars.Model;
 
 namespace SpaceWars.GameObjects
@@ -24,9 +25,10 @@ namespace SpaceWars.GameObjects
         {
             Speed = UP;
             Position = position;
-            BoundingBox = new Rectangle((int)position.X,(int)position.Y, 5, 5);
+            BoundingBox = new Rectangle((int)position.X,(int)position.Y, 64, 64);
         }
 
+        private int EnemyDMG = 200;
         public override void Intersect(IGameObject obj)
         {
             if (obj is IAsteroid)
@@ -34,6 +36,18 @@ namespace SpaceWars.GameObjects
                 var asteroid = (Asteroid)obj;
                 Owner.RemoveObject(asteroid);
                 Owner.RemoveObject(this);
+            }
+
+            if (obj is IEnemy)
+            {
+                var enemy = (Enemy)obj;
+
+                EnemyDMG -= 50;
+                if (EnemyDMG == 0)
+                {
+                    Owner.RemoveObject(enemy);
+                    Owner.RemoveObject(this);
+                }
             }
         }
 
@@ -58,11 +72,6 @@ namespace SpaceWars.GameObjects
             if (needToRemove)
                 Owner.RemoveObject(this);
         }
-
-
-
-
-        
 
     }
 }

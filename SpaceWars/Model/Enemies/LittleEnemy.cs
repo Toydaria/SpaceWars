@@ -23,7 +23,7 @@ namespace SpaceWars.Model
         Random rand = new Random();
 
         Position = new Vector2(rand.Next(LeftCorner, RightCorner), UpCorner);
-        this.Speed = new Vector2(0, 7);
+        this.Speed = new Vector2(0, 4);
 
         this.BoundingBox = new Rectangle((int)Position.X, (int)Position.Y, 100, 69);
 
