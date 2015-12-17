@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using System.Reflection;
-using SpaceWars.Interfaces;
+﻿using SpaceWars.Interfaces;
 using SpaceWars.Model;
 
 namespace SpaceWars.GameObjects
@@ -20,40 +18,23 @@ namespace SpaceWars.GameObjects
         private const int RightCorner = 700;
         private const int UpCorner = 0;
         private const int DownCorner = 1000;
-
-        private int speed;
-
-        private Texture2D texture;
+        
 
         public Bullet(Vector2 position)
         {
             Speed = UP;
             Position = position;
             BoundingBox = new Rectangle((int)position.X,(int)position.Y, 5, 5);
-            texture = null;
-            speed = 15;
-            IsVisible = false;
-            Damage = 30;//TODO: hardcoded value to change
         }
-
-        public bool IsVisible { get; set; }
-        public int Damage { get; set; }
 
         public override void Intersect(IGameObject obj)
         {
-            //if (obj.GetType() == typeof(ChunkyAsteroid))
-            //{
-            //    ChunkyAsteroid asteroid = (ChunkyAsteroid)obj;
-            //    Owner.RemoveObject(asteroid);
-            //    Owner.RemoveObject(this);
-            //}
-            if (obj is IAsteroid)
+            if (obj.GetType() == typeof(ChunkyAsteroid))
             {
-                var asteroid = (Asteroid) obj;
+                ChunkyAsteroid asteroid = (ChunkyAsteroid)obj;
                 Owner.RemoveObject(asteroid);
                 Owner.RemoveObject(this);
             }
-
         }
 
         public override void LoadContent(ResourceManager resourceManager)

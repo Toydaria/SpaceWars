@@ -2,21 +2,26 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using SpaceWars.GameObjects;
 using SpaceWars.Interfaces;
 
 namespace SpaceWars
 {
     using SpaceWars.Model;
     using SpaceWars.GameObjects.AsteroidsPack;
+    using SpaceWars.Model.Bonuses;
    
 
     public class ObjectManager
     {
-        
+
+
+
         List<IGameObject> objects = new List<IGameObject>();
         private int elapsedAsteroidTime = 0;
-        private const int AsteroidFieldPeriod = 80;
+        private const int AsteroidFieldPeriod = 50;
+        private int elapsedBonusTime = 0;
+        private const int BonusPeriod = 3750;
+
 
         public ResourceManager ResourceMgr { get; set; }
 
@@ -87,7 +92,9 @@ namespace SpaceWars
 
         public void Think(GameTime gametime)
         {
-            CreateAsteroidField(gametime);
+            //CreateAsteroidField(gametime);
+            DropBonus(gametime);
+
             for (int i = 0; i < objects.Count; ++i)
             {
                 objects[i].Think(gametime);
@@ -106,12 +113,36 @@ namespace SpaceWars
             if(elapsedAsteroidTime > AsteroidFieldPeriod)
             {
                 elapsedAsteroidTime = 0;
-                var asteroid = GetAsteroid();
-                AddObject(asteroid);
+                AddObject(new ChunkyAsteroid());
             }
         }
 
-        
+        void DropBonus(GameTime gametime)
+        {
+            elapsedBonusTime += gametime.ElapsedGameTime.Milliseconds;
+
+            if (elapsedBonusTime > BonusPeriod)
+            {
+                elapsedBonusTime = 0;
+                Random rand = new Random(gametime.TotalGameTime.Seconds);
+                int choice = rand.Next(0, 5);
+
+                switch(choice)
+                {
+                    case 0:
+                        AddObject(new HealthBonus());
+                        break;
+                    case 1:
+                        AddObject(new ShieldBonus());
+                        break;
+                    default:
+                        // There is no bonus for you ... sorry
+                        break;
+                }
+                
+            }
+        }
+
         void RemoveGarbage()
         {
             for (int i = objects.Count - 1; i >= 0; i--)
@@ -121,20 +152,5 @@ namespace SpaceWars
             }
         }
 
-        private Asteroid GetAsteroid()
-        {
-            Random randomAsteroid = new Random();
-            int index = randomAsteroid.Next(0, 3);
-            switch (index)
-            {
-                case 0:
-                    return new ChunkyAsteroid();
-                case 1:
-                    return new RockyAsteroid();
-                case 2:
-                    return new RedFartAsteroid();
-            }
-            return null;
-        }
     }
 }

@@ -9,6 +9,8 @@ namespace SpaceWars.Model
 
     public abstract class GameObject : IGameObject
     {
+
+
         private Vector2 position;
         private Vector2 speed;
         private Texture2D texture;
@@ -26,6 +28,7 @@ namespace SpaceWars.Model
             NeedToRemove = false;
         }
 
+       
         public virtual void Move()
         {
             Position += Speed;

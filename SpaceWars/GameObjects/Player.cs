@@ -11,7 +11,7 @@ namespace SpaceWars.GameObjects
     using Microsoft.Xna.Framework.Input;
     using SpaceWars;
 
-    public class Player: GameObject
+    public class Player: GameObject, IDestructibleObject
     {
         private static readonly Vector2 UP = new Vector2(0, -10);
         private static readonly Vector2 DOWN = new Vector2(0, 10);
@@ -31,12 +31,12 @@ namespace SpaceWars.GameObjects
         private Vector2 rightTemp;
 
 
-        private Stringer Text = new Stringer(new Vector2(100, 100));
-
-
-        private int health;
-        private int damage;
         private int elapsedShootTime = 0;
+
+        public int Health { get; set; }
+        public int MaxHealth { get; set; }
+        public int Shield { get; set; }
+        public int MaxShield { get; set; }
         
         
 
@@ -46,43 +46,23 @@ namespace SpaceWars.GameObjects
             Position = new Vector2(350, 890);
             this.BoundingBox = new Rectangle(350, 890, 64, 64);
             Speed = new Vector2(0,0);
+            MaxHealth = 100;
             Health = 100;//TODO: hardcoded value to change
             Damage = 100;//TODO: hardcoded value to change
         }
 
-        public int Health
-        {
-            get { return this.health; }
-
-            set
-            {
-                if (value < 0)
-                {
-                    this.health = 0;
-                }
-                this.health = value;
-            }
-        }
         public int Damage { get; set; }
-        public int Shield { get; set; }
+        
 
         public override void LoadContent(ResourceManager resourceManager)
         {
-            Text.LoadContent(resourceManager);
             Texture = resourceManager.GetResource("ship");
         }
-
-        
 
         public override void Think(GameTime gameTime)
         {
             //Getting the keyboardState
             KeyboardState keyboard = Keyboard.GetState();
-
-            this.BoundingBox = new Rectangle((int)Position.X, (int)Position.Y, Texture.Width, Texture.Height);
-
-            //Draw Text
-            Text.Text = "Health: " + Health;
 
             //Player Controls
             if (keyboard.IsKeyDown(Keys.A) && Position.X > LeftCorner)
@@ -138,16 +118,41 @@ namespace SpaceWars.GameObjects
             
         }
 
-        public override void Draw(SpriteBatch spriteBatch)
+        public void TakeDMG(int dmg)
         {
-            Text.Draw(spriteBatch);
-            spriteBatch.Draw(Texture, Position, Color.White);
+            Health -= dmg;
+
+            if (Health < 0)
+                Destroy();
+            else if (Health > MaxHealth)
+                Health = MaxHealth;
         }
+
+        public  void Destroy()
+        {
+            Owner.RemoveObject(this);
+            // End of the game
+        }
+
+        //public override void Draw(SpriteBatch spriteBatch)
+        //{
+        //    spriteBatch.Draw(Texture, Position, Color.White);
+        //}
 
         void Shoot()
         {
             Owner.AddObject(new Bullet(Position));
         }
+
+        public void AddShield(int amount)
+        {
+            if(Shield + amount > MaxShield)
+                Shield = MaxShield;
+            else 
+                Shield += amount;
+        }
+
+
     }
 
     

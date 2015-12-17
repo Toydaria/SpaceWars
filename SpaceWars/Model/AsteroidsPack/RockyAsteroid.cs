@@ -6,49 +6,28 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Content;
 using SpaceWars.Interfaces;
-using SpaceWars.Model;
 
 namespace SpaceWars.GameObjects.AsteroidsPack
 {
     class RockyAsteroid : Asteroid
     {
-        private new const int TextureWidth = 47;
-        private new const int TextureHeight = 43;
-        private new const int MinXVelocity = -2;
-        private new const int MaxXVelocity = 2;
-        private new const int MinYVelocity = -9;
-        private new const int MaxYVelocity = 9;
-        /// <summary>
-        /// TODO hardcoded damage 
-        /// </summary>
-        private new const int damage = 60;
-        private bool isVisible = true;
-
-        public RockyAsteroid() : base(damage)
-        {
-            Random rand = new Random();
-
-            Position = new Vector2(rand.Next(LeftCorner, RightCorner), UpCorner);
-            Speed = new Vector2(rand.Next(MinXVelocity, MaxXVelocity), rand.Next(MinYVelocity, MaxYVelocity));
-
-            BoundingBox = new Rectangle((int) Position.X, (int) Position.Y, TextureWidth, TextureHeight);
+        public RockyAsteroid(ContentManager content, string asset, Vector2 position, Vector2 velocity, int health, int damage) : base(content, "Sprites/rocky", new Vector2(randomPicker.Next(0, 800), -50), new Vector2(0, 2), 40)
+        { 
         }
 
         public override void Intersect(IGameObject obj)
         {
-            if (obj.GetType() == typeof (Player))
-            {
-                Player player = (Player) obj;
-                player.Health -= damage;
-                this.isVisible = false;
-            }
+            throw new NotImplementedException();
         }
 
         public override void LoadContent(ResourceManager resourceManager)
         {
-            Texture = resourceManager.GetResource("rocky");
+            throw new NotImplementedException();
         }
 
+        public override void Think(GameTime gameTime)
+        {
+            throw new NotImplementedException();
+        }
     }
-
 }

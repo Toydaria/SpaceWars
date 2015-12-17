@@ -11,50 +11,48 @@ using SpaceWars.Interfaces;
 
 namespace SpaceWars.Model.Bonuses
 {
-    abstract class HealthBonus: Bonus
+    class HealthBonus: Bonus
     {
-        private bool consumedBonus;
-        private Texture2D texture;
+
+        private const int UpCorner = -40; // health bonus size
+        private const int RightCorner = 800 - 40; // Screen width - health bonus width
+        private const int DownCorner = 950 - 40; // Screen height - health bonus height
+        private const int LeftCorner = 0;
 
 
         public HealthBonus()
         {
-            this.Position = new Vector2(20, 890);
-            this.BoundingBox = new Rectangle(20,890,50,50);
+            Random rand = new Random();
+
+            Position = new Vector2(rand.Next(LeftCorner, RightCorner), UpCorner);
+            this.Speed = new Vector2(0, 7);
+
+            this.BoundingBox = new Rectangle((int)Position.X, (int)Position.Y, 40, 40);
+            
 
         }
-
-
-        
-
-       // public override void Draw(SpriteBatch spriteBatch)
-       // {
-          //  spriteBatch.Draw(texture, Position, Color.White);
-        //   base.Draw(spriteBatch);
-        //}
-
-       // public void LoadContent(ContentManager Content)
-       // {
-         //   texture = Content.Load<Texture2D>("healthbonus");
-        //}
 
         public override void OnGetBonus(IGameObject obj)
         {
            if (obj.GetType() == typeof(Player))
            {
                Player player = (Player) obj;
-               player.Speed = new Vector2(10,0);
 
+               player.TakeDMG(-50);
+
+               Owner.RemoveObject(this);
            }
         }
 
 
         public override void LoadContent(ResourceManager resourceManager)
         {
-            throw new NotImplementedException();
+            Texture = resourceManager.GetResource("HealthBonus");
         }
 
-        public abstract override void Think(GameTime gameTime);
-        
+        public  override void Think(GameTime gameTime)
+        {
+            Speed = new Vector2(4*(float)Math.Cos(gameTime.TotalGameTime.Milliseconds/300), Speed.Y);
+        }
     }
 }
