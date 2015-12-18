@@ -17,5 +17,6 @@ namespace SpaceWars.Model
             OnGetEnemy(obj);
         }
 
+        public int ScoringPoints { get; }
     }
 }
