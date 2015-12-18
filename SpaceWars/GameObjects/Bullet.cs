@@ -32,6 +32,11 @@ namespace SpaceWars.GameObjects
 
         public override void Intersect(IGameObject obj)
         {
+            var enemyTarget = obj as IGiveScore;
+            if (enemyTarget != null)
+            {
+                Owner.ScoreManager.AddPoints(enemyTarget.ScoringPoints);
+            }
             if (obj is IAsteroid)
             {
                 var asteroid = (Asteroid)obj;
