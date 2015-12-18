@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceWars.Interfaces;
 using SpaceWars.Model;
@@ -9,65 +8,67 @@ namespace SpaceWars.GameObjects
 {
     public abstract class Asteroid : GameObject, IAsteroid
     {
-        protected const int TextureWidth = 38; 
-        protected const int TextureHeight = 38; 
+        protected const int TextureWidth = 0; 
+        protected const int TextureHeight = 0; 
         protected const int UpCorner = - TextureWidth; // asteroid size
         protected const int RightCorner = 800 - TextureWidth; // Screen width - asteroid width
         protected const int DownCorner = 950 - TextureHeight; // Screen height - asteroid height
         protected const int LeftCorner = 0;
-        protected const int MinXVelocity = -12;
-        protected const int MaxXVelocity = 12;
-        protected const int MinYVelocity = -9;
-        protected const int MaxYVelocity = 9;
+        protected const int MinXVelocity = 0;
+        protected const int MaxXVelocity = 0;
+        protected const int MinYVelocity = 0;
+        protected const int MaxYVelocity = 0;
         protected int damage;
         protected static Random rand = new Random();
         protected Vector2 origin;
         protected float rotationAngle = rand.Next(0, 180);
-
+        
+        
         public Asteroid(int damage)
         {
             Random rand = new Random();
-
-            this.Damage = damage;
+            Damage = damage;
             Position = new Vector2(rand.Next(LeftCorner, RightCorner), UpCorner);
             Speed = new Vector2(rand.Next(MinXVelocity, MaxXVelocity), rand.Next(MinYVelocity, MaxYVelocity));
             BoundingBox = new Rectangle((int)Position.X, (int)Position.Y, TextureWidth, TextureHeight);
         }
 
-        public int Damage { get; private set; }
+        public int Damage { get; }
+        public Vector2 Origin
+        {
+            get { return this.origin; }
+            set
+            {
+                if (value.X <= 0 || value.Y <= 0)
+                {
+                    throw new ArgumentException("Origin cannot be 0 or negative");
+                }
+                this.origin = value;
+            }
+        }
 
         public override void Intersect(IGameObject obj)
         {
             if (obj.GetType() == typeof(Player))
             {
                 Player player = (Player)obj;
-                player.TakeDMG(this.Damage);
+                player.TakeDMG(Damage);
                 Owner.RemoveObject(this);
             }
         }
-        
-        public override void LoadContent(ResourceManager resourceManager)
-        {
-            Texture = resourceManager.GetResource("asteroid");
-        }
-
+ 
         public override void Think(GameTime gameTime)
         {
-            bool needToRemove = false;
-
-            if (Position.Y > DownCorner + TextureHeight) // asteroid size
+            bool needToRemove = Position.Y > DownCorner + TextureHeight;
+            if (Position.X < LeftCorner - TextureWidth)
             {
                 needToRemove = true;
             }
-            if (Position.X < LeftCorner - TextureWidth) // asteroid size
+            if (Position.X > RightCorner + TextureWidth)
             {
                 needToRemove = true;
             }
-            if (Position.X > RightCorner + TextureWidth) // asteroid size
-            {
-                needToRemove = true;
-            }
-            if (Position.Y < UpCorner) // asteroid size
+            if (Position.Y < UpCorner)
             {
                 needToRemove = true;
             }
@@ -77,9 +78,10 @@ namespace SpaceWars.GameObjects
                 Owner.RemoveObject(this);
             }
 
-            origin.X = Texture.Width / 2f;
-            origin.Y = Texture.Height / 2f;
+            origin.X = TextureWidth / 2f;
+            origin.Y = TextureHeight / 2f;
         }
+
 
         private void Rotate(GameTime gameTime)
         {
