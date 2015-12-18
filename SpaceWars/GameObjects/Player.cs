@@ -23,7 +23,7 @@ namespace SpaceWars.GameObjects
         private const int UpCorner = 0;
         private const int DownCorner = 950 - 64; // Screen height - ship height
         private const int ShootInterval = 120;
-
+        public const int MinHealth = 0;
 
         private Vector2 upTemp;
         private Vector2 downTemp;
@@ -36,23 +36,23 @@ namespace SpaceWars.GameObjects
 
         private Stringer HealthText = new Stringer(new Vector2(300, 200));
         private Stringer ShieldText = new Stringer(new Vector2(150, 200));
+        private Stringer ScoreText = new Stringer(new Vector2(450, 200));
 
         public int Health { get; set; }
-        public int MaxHealth { get; set; }
+        
         public int Shield { get; set; }
         
         
 
         public Player()
         {
-            Texture = null;
+            //Texture = null;
             Position = new Vector2(350, 890);
             this.BoundingBox = new Rectangle(350, 890, 64, 64);
             Speed = new Vector2(0,0);
-            MaxHealth = 100;
-
-            Health = 100;//TODO: hardcoded value to change
-            Damage = 100;//TODO: hardcoded value to change
+          
+            Health = 100;
+            Damage = 100;
         }
 
         public int Damage { get; set; }
@@ -62,10 +62,11 @@ namespace SpaceWars.GameObjects
         {
             HealthText.LoadContent(resourceManager);
             ShieldText.LoadContent(resourceManager);
+            ScoreText.LoadContent(resourceManager);
             //DONT REMOVE THIS
             HealthText.Text = "Health: " + this.Health;
             ShieldText.Text = "Shield: " + this.Shield;
-
+            ScoreText.Text = "Score:" + Owner.ScoreManager.TotalScore;
             Texture = resourceManager.GetResource("ship");
         }
 
@@ -77,7 +78,7 @@ namespace SpaceWars.GameObjects
             //Updating Text
             HealthText.Text = "Health: " + this.Health;
             ShieldText.Text = "Shield: " + this.Shield;
-            
+            ScoreText.Text = "Score:" + Owner.ScoreManager.TotalScore;
 
             //Player Controls
             if (keyboard.IsKeyDown(Keys.A) && Position.X > LeftCorner)
@@ -147,7 +148,7 @@ namespace SpaceWars.GameObjects
                 {
                     Shield -= dmg;
                 }
-                if (Health <= 0)
+                if (Health <= MinHealth)
                 {
                     Health = 0;
                     Destroy();
@@ -172,6 +173,7 @@ namespace SpaceWars.GameObjects
             spriteBatch.Draw(Texture, Position, Color.White);
             HealthText.Draw(spriteBatch);
             ShieldText.Draw(spriteBatch);
+            ScoreText.Draw(spriteBatch);
         }
 
         void Shoot()
@@ -191,9 +193,6 @@ namespace SpaceWars.GameObjects
 
             }
         }
-
-
     }
-
     
 }
