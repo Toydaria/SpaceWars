@@ -1,38 +1,37 @@
-﻿using SpaceWars.Interfaces;
-using SpaceWars.Model;
-
-namespace SpaceWars.GameObjects
+﻿namespace SpaceWars.Model.Enemies.EnemyBullets
 {
-    using System.Collections.Generic;
+    using SpaceWars.GameObjects;
+    using SpaceWars.Interfaces;
 
     using Microsoft.Xna.Framework;
-    using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Content;
-    using AsteroidsPack;
+    using Microsoft.Xna.Framework.Graphics;
 
-    public class Bullet: GameObject
+    public abstract class EnemyBullet : GameObject
     {
-
-        private static readonly Vector2 UP = new Vector2(0, -30);
+        //private static readonly Vector2 UP = new Vector2(0, -30);
         private const int LeftCorner = 0;
-        private const int RightCorner = 900;
+        private const int RightCorner = 700;
         private const int UpCorner = 0;
         private const int DownCorner = 1000;
-        
 
-        public Bullet(Vector2 position)
+
+        protected EnemyBullet(Vector2 position, Vector2 speed, int damage)
         {
-            Speed = UP;
+            this.Damage = damage;
+            Speed = speed;
             Position = position;
             BoundingBox = new Rectangle((int)position.X,(int)position.Y, 64, 64);
         }
 
+        public int Damage { get; set; }
+
         public override void Intersect(IGameObject obj)
         {
-            if (obj is IAsteroid)
+            if (obj is Player)
             {
-                var asteroid = (Asteroid)obj;
-                Owner.RemoveObject(asteroid);
+                var player = (Player)obj;
+                player.TakeDMG(Damage);
                 Owner.RemoveObject(this);
             }
         }
@@ -59,10 +58,6 @@ namespace SpaceWars.GameObjects
                 Owner.RemoveObject(this);
         }
 
-
-
-
-        
-
     }
 }
+  

@@ -75,6 +75,9 @@
     <Compile Include="GameObjects\Image.cs" />
     <Compile Include="GameObjects\Stringer.cs" />
     <Compile Include="Interfaces\IDestructible.cs" />
+    <Compile Include="Model\Enemies\EnemyBullets\BigEnemyBullet.cs" />
+    <Compile Include="Model\Enemies\EnemyBullets\EnemyBullet.cs" />
+    <Compile Include="Model\Enemies\EnemyBullets\LittleEnemyBullet.cs" />
     <Compile Include="ResourceManager.cs" />
     <Compile Include="GameObjects\Asteroids.cs" />
     <Compile Include="GameObjects\Bullet.cs" />

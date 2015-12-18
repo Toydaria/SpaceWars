@@ -106,3 +106,5 @@ C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\SpaceWa
 C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\SpaceWars\SpaceWars\obj\x86\Debug\SpaceWars.pdb
 C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\SpaceWars\SpaceWars\SpaceWars.exe
 C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\SpaceWars\SpaceWars\SpaceWars.pdb
+C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\SpaceWars\SpaceWars\Content\bigEnemyBullet.xnb
+C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\SpaceWars\SpaceWars\Content\smallEnemyBullet.xnb

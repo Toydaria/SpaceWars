@@ -109,6 +109,24 @@
       <Output>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\SpaceWars\SpaceWars\Content\spritefont.xnb</Output>
       <Time>2015-12-17T21:03:24.8944286+02:00</Time>
     </Item>
+    <Item>
+      <Source>bigEnemyBullet.png</Source>
+      <Name>bigEnemyBullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\SpaceWars\SpaceWars\Content\bigEnemyBullet.xnb</Output>
+      <Time>2015-12-18T11:02:19.8721824+02:00</Time>
+    </Item>
+    <Item>
+      <Source>smallEnemyBullet.png</Source>
+      <Name>smallEnemyBullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\SpaceWars\SpaceWars\Content\smallEnemyBullet.xnb</Output>
+      <Time>2015-12-18T11:02:19.8721824+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{C16D4719-DC45-48DD-96BA-AB9CBDFBCA20}</ContentProjectGUID>

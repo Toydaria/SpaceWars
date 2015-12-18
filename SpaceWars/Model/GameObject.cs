@@ -28,12 +28,11 @@ namespace SpaceWars.Model
             NeedToRemove = false;
         }
 
-       
+
         public virtual void Move()
         {
             Position += Speed;
             BoundingBox = new Rectangle((int)Position.X, (int)Position.Y, BoundingBox.Width, BoundingBox.Height);
-
         }
 
         public abstract void Intersect(IGameObject obj);

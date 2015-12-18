@@ -138,6 +138,14 @@
         }
 
 
+        public List<IGameObject> GetEnemyBullet()
+        {
+            var bulletList = objects.FindAll(b => b.GetType() == typeof(Bullet));
+            return bulletList;
+
+        }
+
+
         void DropBonus(GameTime gametime)
         {
             elapsedBonusTime += gametime.ElapsedGameTime.Milliseconds;
@@ -172,7 +180,7 @@
             {
                 elapsedEnemyTime = 0;
                 Random rand = new Random(gametime.TotalGameTime.Seconds);
-                int choice = rand.Next(0, 5);
+                int choice = rand.Next(0, 2);
 
                 switch (choice)
                 {
@@ -189,6 +197,7 @@
 
             }
         }
+
 
         void RemoveGarbage()
         {

@@ -10,3 +10,5 @@ Content\startBackground.xnb
 Content\bigEnemy.xnb
 Content\littleEnemy.xnb
 Content\spritefont.xnb
+Content\bigEnemyBullet.xnb
+Content\smallEnemyBullet.xnb
