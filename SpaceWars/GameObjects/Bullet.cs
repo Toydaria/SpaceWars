@@ -12,6 +12,9 @@ namespace SpaceWars.GameObjects
 
     public class Bullet: GameObject
     {
+        //Stefka: cropped the png of the laser and added TextureWidth = 40 and TextureHight = 64(the size of the png) and changed the values in the constructor, because they were 5 X 5
+        private const int TextureWidth = 40;
+        private const int TextureHight = 64; 
 
         private static readonly Vector2 UP = new Vector2(0, -30);
         private const int LeftCorner = 0;
@@ -24,7 +27,7 @@ namespace SpaceWars.GameObjects
         {
             Speed = UP;
             Position = position;
-            BoundingBox = new Rectangle((int)position.X,(int)position.Y, 5, 5);
+            BoundingBox = new Rectangle((int)position.X,(int)position.Y, TextureWidth, TextureHight);
         }
 
         public override void Intersect(IGameObject obj)
