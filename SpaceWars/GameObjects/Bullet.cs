@@ -12,22 +12,22 @@ namespace SpaceWars.GameObjects
 
     public class Bullet: GameObject
     {
-        //Stefka: cropped the png of the laser and added TextureWidth = 40 and TextureHight = 64(the size of the png) and changed the values in the constructor, because they were 5 X 5
-        private const int TextureWidth = 40;
-        private const int TextureHight = 64; 
+        //Stefka: cropped the png of the laser and added TextureWidth and TextureHight = 64(the size of the png) and changed the values in the constructor, because they were 5 X 5 - the reason why asteroids were shot only from the right
+        private const int TextureWidth = 64;
+        private const int TextureHeight = 64; 
 
         private static readonly Vector2 UP = new Vector2(0, -30);
         private const int LeftCorner = 0;
-        private const int RightCorner = 700;
+        private const int RightCorner = 800;
         private const int UpCorner = 0;
-        private const int DownCorner = 1000;
+        private const int DownCorner = 950;
         
 
         public Bullet(Vector2 position)
         {
             Speed = UP;
             Position = position;
-            BoundingBox = new Rectangle((int)position.X,(int)position.Y, TextureWidth, TextureHight);
+            BoundingBox = new Rectangle((int)position.X,(int)position.Y, TextureWidth, TextureHeight);
         }
 
         public override void Intersect(IGameObject obj)
