@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceWars.Interfaces
 {
-    public interface IEnemy
+    public interface IEnemy: IGiveScore
     {
         void OnGetEnemy(IGameObject obj);
 
