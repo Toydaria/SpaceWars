@@ -18,12 +18,7 @@ namespace SpaceWars.GameObjects
 
         private static readonly Vector2 UP = new Vector2(0, -30);
         private const int LeftCorner = 0;
-<<<<<<< HEAD
-        private const int RightCorner = 900;
-=======
-        //changed the values for Rightcorner and DownCorner because the bullet didn't shoot when the ship was far right
         private const int RightCorner = 800;
->>>>>>> 205e471a841adccc748e0e2e08244c8e6058098a
         private const int UpCorner = 0;
         private const int DownCorner = 950;
         
@@ -32,11 +27,7 @@ namespace SpaceWars.GameObjects
         {
             Speed = UP;
             Position = position;
-<<<<<<< HEAD
-            BoundingBox = new Rectangle((int)position.X,(int)position.Y, 64, 64);
-=======
             BoundingBox = new Rectangle((int)position.X,(int)position.Y, TextureWidth, TextureHeight);
->>>>>>> 205e471a841adccc748e0e2e08244c8e6058098a
         }
 
         public override void Intersect(IGameObject obj)
