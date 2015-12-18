@@ -22,9 +22,9 @@ namespace SpaceWars.GameObjects
         protected static Random rand = new Random();
         protected Vector2 origin;
         protected float rotationAngle = rand.Next(0, 180);
-        
-        
-        public Asteroid(int damage)
+        private const int scoringPoints = 1;
+
+        protected Asteroid(int damage)
         {
             Random rand = new Random();
             Damage = damage;
@@ -46,6 +46,8 @@ namespace SpaceWars.GameObjects
                 this.origin = value;
             }
         }
+
+        public int ScoringPoints => scoringPoints;
 
         public override void Intersect(IGameObject obj)
         {
@@ -95,5 +97,7 @@ namespace SpaceWars.GameObjects
         {
             spriteBatch.Draw(Texture, Position, null, Color.White, rotationAngle, origin, 1.0f, SpriteEffects.None, 0f);
         }
+
+        
     }       
 }
