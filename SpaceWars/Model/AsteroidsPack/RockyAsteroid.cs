@@ -18,11 +18,7 @@ namespace SpaceWars.GameObjects.AsteroidsPack
         private new const int MaxXVelocity = 2;
         private new const int MinYVelocity = -9;
         private new const int MaxYVelocity = 9;
-        /// <summary>
-        /// TODO hardcoded damage 
-        /// </summary>
-        private new const int damage = 60;
-        private bool isVisible = true;
+        private new const int damage = 25;
 
         public RockyAsteroid() : base(damage)
         {
@@ -30,8 +26,7 @@ namespace SpaceWars.GameObjects.AsteroidsPack
 
             Position = new Vector2(rand.Next(LeftCorner, RightCorner), UpCorner);
             Speed = new Vector2(rand.Next(MinXVelocity, MaxXVelocity), rand.Next(MinYVelocity, MaxYVelocity));
-
-            BoundingBox = new Rectangle((int) Position.X, (int) Position.Y, TextureWidth, TextureHeight);
+            BoundingBox = new Rectangle((int)Position.X, (int)Position.Y, TextureWidth, TextureHeight);
         }
 
         
