@@ -7,7 +7,7 @@ using System.Text;
 
 namespace SpaceWars.Interfaces
 {
-    public interface IAsteroid
+    public interface IAsteroid: IGiveScore
     {
         int Damage { get; }
     }
