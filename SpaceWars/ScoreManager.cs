@@ -6,11 +6,11 @@ using SpaceWars.Interfaces;
 
 namespace SpaceWars
 {
-    class ScoreManager
+    public class ScoreManager
     {
-        private int totalScore;
+        private int totalScore = 0;
 
-        public ScoreManager(int totalScore)
+        public ScoreManager()
         {
             this.TotalScore = totalScore;
         }
@@ -24,12 +24,13 @@ namespace SpaceWars
                 {
                     throw new ArgumentException("Score cannot be negative");
                 }
+                this.totalScore = value;
             }
         }
 
-        public void AddPoints(IGiveScore enemyTarget)
+        public void AddPoints(int points)
         {
-            this.TotalScore += enemyTarget.Points;
+            this.TotalScore += points;
         }
     }
 }
