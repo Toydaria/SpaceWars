@@ -108,3 +108,11 @@ C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\SpaceWa
 C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\SpaceWars\SpaceWars\SpaceWars.pdb
 C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\SpaceWars\SpaceWars\Content\bigEnemyBullet.xnb
 C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\SpaceWars\SpaceWars\Content\smallEnemyBullet.xnb
+C:\GitHubProjects\SpaceWars\SpaceWars\Content\redfart.xnb
+C:\GitHubProjects\SpaceWars\SpaceWars\Content\rocky.xnb
+C:\GitHubProjects\SpaceWars\SpaceWars\Content\startBackground.xnb
+C:\GitHubProjects\SpaceWars\SpaceWars\Content\bigEnemy.xnb
+C:\GitHubProjects\SpaceWars\SpaceWars\Content\littleEnemy.xnb
+C:\GitHubProjects\SpaceWars\SpaceWars\Content\bigEnemyBullet.xnb
+C:\GitHubProjects\SpaceWars\SpaceWars\Content\smallEnemyBullet.xnb
+C:\GitHubProjects\SpaceWars\SpaceWars\Content\spritefont.xnb
