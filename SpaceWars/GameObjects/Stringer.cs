@@ -1,4 +1,6 @@
-﻿namespace SpaceWars.GameObjects
+﻿using SpaceWars.Core;
+
+namespace SpaceWars.GameObjects
 {
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Content;
@@ -7,7 +9,6 @@
     public class Stringer
     {
         private SpriteFont spriteFont;
-
         private Vector2 Position { get; set; }
         public string Text { get; set; }
 

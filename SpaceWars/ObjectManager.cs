@@ -25,8 +25,9 @@ namespace SpaceWars
         private int elapsedEnemyTime = 0;
         private const int EnemyPeriod = 4000;
         public ScoreManager ScoreManager = new ScoreManager();
-        private Data data = new Data();
+        public Data data = new Data();
         public ResourceManager ResourceMgr { get; set; }
+
 
         public ObjectManager()
         {

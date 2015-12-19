@@ -66,7 +66,6 @@ namespace SpaceWars
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
             spriteBatch.Begin();
             ScreenManager.Instance.Draw(spriteBatch);
             spriteBatch.End();

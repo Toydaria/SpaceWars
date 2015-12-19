@@ -167,6 +167,9 @@ namespace SpaceWars.GameObjects
         {
             Owner.RemoveObject(this);
             //TODO   when the screen is GameOver -> Show Score =>  Owner.ScoreManager.ScoringPoints;
+            int score = Owner.ScoreManager.TotalScore;
+            Owner.data.AddScore(score);
+            Owner.data.PrintScore();
             // End of the game
         }
 
