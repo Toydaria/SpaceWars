@@ -1,5 +1,10 @@
 C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\Temp\SpaceWars\SpaceWarsContent\obj\x86\Debug\SpaceWarsContent.contentprojResolveAssemblyReference.cache
 F:\Softuni\Game\Game\SpaceWars\SpaceWarsContent\obj\x86\Debug\SpaceWarsContent.contentprojResolveAssemblyReference.cache
 C:\Users\Alex\Desktop\Alex\SoftUni\OOPTeamworkRepository\SpaceWarsGithub\SpaceWars\SpaceWarsContent\obj\x86\Debug\SpaceWarsContent.contentprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 D:\Dropbox\Toydaria Teamwork\Repos\SpaceWars\SpaceWars\SpaceWarsContent\obj\x86\Debug\SpaceWarsContent.contentprojResolveAssemblyReference.cache
 F:\Dropbox\Dropbox\Toydaria Teamwork\Repos\SpaceWars\SpaceWars\SpaceWarsContent\obj\x86\Debug\SpaceWarsContent.contentprojResolveAssemblyReference.cache
+=======
+C:\GitHubProjects\SpaceWars\SpaceWarsContent\obj\x86\Debug\SpaceWarsContent.contentprojResolveAssemblyReference.cache
+>>>>>>> 397cd01ec2e41c987e00cd6a987848bce6b936a4
+D:\Dropbox\Toydaria Teamwork\Repos\SpaceWars\SpaceWarsContent\obj\x86\Debug\SpaceWarsContent.contentprojResolveAssemblyReference.cache
