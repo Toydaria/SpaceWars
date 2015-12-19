@@ -13,7 +13,7 @@
         private const int DownCorner = 950 - 279; // Screen height - health bonus height
         private const int LeftCorner = 0;
         private const int ShootDelayConst = 40;
-
+        private const int scoringPoints = 3;
         private int shootDelay = 0;
 
 

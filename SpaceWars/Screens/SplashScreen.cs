@@ -33,10 +33,17 @@
             KeyboardState keyboard = Keyboard.GetState();
 
             if (keyboard.IsKeyDown(Keys.Escape))
+            {
                 ScreenManager.Instance.Engine.Exit();
+            }
             if (keyboard.IsKeyDown(Keys.Enter))
+            {
                 ScreenManager.Instance.ChangeScreen("MainScreen");
-
+            }
+            //if (keyboard.IsKeyDown(Keys.H))
+            //{
+            //    ScreenManager.Instance.ChangeScreen("HighScore");
+            //}
             base.Update(gameTime);
         }
 

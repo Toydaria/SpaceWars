@@ -24,7 +24,7 @@
             BoundingBox = new Rectangle((int)position.X,(int)position.Y, 64, 64);
         }
 
-        public int Damage { get; set; }
+        public int Damage { get; protected set; }
 
         public override void Intersect(IGameObject obj)
         {

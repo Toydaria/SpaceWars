@@ -153,8 +153,9 @@ namespace SpaceWars.GameObjects
                     Health = 0;
                     Destroy();
                 }
-                    
-                    //Change the screen to GameOver screen
+
+            //Change the screen to GameOver screen
+
         }
 
         public void GiveHealth(int amount)
@@ -165,6 +166,7 @@ namespace SpaceWars.GameObjects
         public  void Destroy()
         {
             Owner.RemoveObject(this);
+            //TODO   when the screen is GameOver -> Show Score =>  Owner.ScoreManager.ScoringPoints;
             // End of the game
         }
 

@@ -15,7 +15,7 @@ namespace SpaceWars.Screens
     {
         Starfield bakcground = new Starfield();
         Player player = new Player();
-        Asteroids asteroid = new Asteroids();
+       // Asteroids asteroid = new Asteroids();
         ObjectManager objectManager = new ObjectManager();
 
         public override void LoadContent(Microsoft.Xna.Framework.Content.ContentManager Content)
