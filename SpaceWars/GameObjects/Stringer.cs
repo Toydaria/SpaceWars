@@ -1,4 +1,5 @@
 ﻿using SpaceWars.Core;
+using SpaceWars.Model;
 
 namespace SpaceWars.GameObjects
 {

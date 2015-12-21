@@ -1,5 +1,6 @@
 ﻿using SpaceWars.Interfaces;
 using SpaceWars.Model;
+using SpaceWars.Model.Enemies.EnemyBullets;
 
 namespace SpaceWars.GameObjects
 {
@@ -35,7 +36,7 @@ namespace SpaceWars.GameObjects
             var enemyTarget = obj as IGiveScore;
             if (enemyTarget != null)
             {
-                Owner.ScoreManager.AddPoints(enemyTarget.ScoringPoints);
+                Owner.scoreManager.AddPoints(enemyTarget.ScoringPoints);
             }
             if (obj is IAsteroid)
             {
@@ -43,6 +44,7 @@ namespace SpaceWars.GameObjects
                 Owner.RemoveObject(asteroid);
                 Owner.RemoveObject(this);
             }
+           
         }
 
         public override void LoadContent(ResourceManager resourceManager)

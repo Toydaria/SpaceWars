@@ -27,7 +27,7 @@
         public int Damage { get; protected set; }
 
         public override void Intersect(IGameObject obj)
-        {
+         {
             if (obj is Player)
             {
                 var player = (Player)obj;
