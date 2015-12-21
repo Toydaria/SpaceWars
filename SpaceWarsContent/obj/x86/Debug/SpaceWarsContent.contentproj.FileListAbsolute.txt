@@ -1,2 +1,0 @@
-D:\Dropbox\Toydaria Teamwork\Repos\SpaceWars\SpaceWarsContent\obj\x86\Debug\SpaceWarsContent.contentprojResolveAssemblyReference.cache
-C:\GitHubProjects\SpaceWars\SpaceWarsContent\obj\x86\Debug\SpaceWarsContent.contentprojResolveAssemblyReference.cache
