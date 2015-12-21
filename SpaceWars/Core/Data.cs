@@ -10,21 +10,17 @@ using SpaceWars.Interfaces;
 
 namespace SpaceWars.Core
 {
-    public class Data: IData
+    public static class Data
     {
-        private readonly List<int> score = new List<int>();
-        private string path = "Core/highscore.txt";
-        private SpriteBatch spriteBatch;
+        private static readonly List<int> score = new List<int>();
+        private static string path = "Core/highscore.txt";
+        private static SpriteBatch spriteBatch;
 
-        public Data()
-        {
-            this.Score = score;
-        }
-
-        public Stringer OutputWriter { get; set; }
-        public ICollection<int> Score { get; set; }
      
-        public void AddScore(int score)
+        public static Stringer OutputWriter { get; set; }
+        public static ICollection<int> Score { get; set; }
+                
+        public static void AddScore(int score)
         {
             StreamWriter writer = new StreamWriter(path, true);
             using (writer)
@@ -35,7 +31,7 @@ namespace SpaceWars.Core
 
         //this method loads all the scores from a file to a List, it is called internally in PrintScores method
 
-        private void LoadScore()
+        private static void LoadScore()
         {
             StreamReader reader = new StreamReader(path);
             using (reader)
@@ -49,7 +45,7 @@ namespace SpaceWars.Core
             }
         }
         //this method is called in HighScoreScreen class to show the top ten scores
-        public void PrintScore()
+        public static void PrintScore()
         {
             LoadScore();
             if (Score.Any())
@@ -67,13 +63,11 @@ namespace SpaceWars.Core
         }
 
 
-        public int GetLastScore()
+        public static int GetLastScore()
         {
             LoadScore();
             int lastScore = Score.Last();
             return lastScore;
         }
-    }
-
     }
 }
