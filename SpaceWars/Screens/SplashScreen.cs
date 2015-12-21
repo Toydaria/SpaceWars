@@ -30,6 +30,7 @@
         {
             Background.Update(gameTime);
 
+            //Controls
             KeyboardState keyboard = Keyboard.GetState();
 
             if (keyboard.IsKeyDown(Keys.Escape))
@@ -38,12 +39,10 @@
             }
             if (keyboard.IsKeyDown(Keys.Enter))
             {
-                ScreenManager.Instance.ChangeScreen("MainScreen");
+
+                ScreenManager.Instance.ChangeScreen("InstructionsScreen");
             }
-            //if (keyboard.IsKeyDown(Keys.H))
-            //{
-            //    ScreenManager.Instance.ChangeScreen("HighScore");
-            //}
+            
             base.Update(gameTime);
         }
 

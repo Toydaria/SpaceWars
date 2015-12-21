@@ -1,12 +1,10 @@
-﻿using SpaceWars.Core;
-
-namespace SpaceWars.GameObjects
+﻿namespace SpaceWars.GameObjects
 {
     using Microsoft.Xna.Framework;
-    using Microsoft.Xna.Framework.Content;
     using Microsoft.Xna.Framework.Graphics;
+    using SpaceWars.Model;
 
-    public class Stringer
+    public class Stringer 
     {
         private SpriteFont spriteFont;
         private Vector2 Position { get; set; }
@@ -17,7 +15,7 @@ namespace SpaceWars.GameObjects
             this.Position = position;
         }
 
-        public void LoadContent(ResourceManager resourceManager)
+        public  void LoadContent(ResourceManager resourceManager)
         {
             spriteFont = resourceManager.GetSpriteFont();
         }
@@ -26,5 +24,6 @@ namespace SpaceWars.GameObjects
         {
             spriteBatch.DrawString(spriteFont, Text, Position, Color.White);
         }
+
     }
 }

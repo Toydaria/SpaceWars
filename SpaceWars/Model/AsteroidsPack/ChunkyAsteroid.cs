@@ -1,23 +1,15 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework.Content;
-using SpaceWars.Interfaces;
-
-using SpaceWars.Model;
-
-namespace SpaceWars.GameObjects.AsteroidsPack
+﻿namespace SpaceWars.GameObjects.AsteroidsPack
 {
+    using Microsoft.Xna.Framework;
+    using System;
+
     class ChunkyAsteroid : Asteroid
     {
         private new const int TextureWidth = 38;
         private new const int TextureHeight = 38;
         private new const int MinXVelocity = -3;
         private new const int MaxXVelocity = 3;
-        private new const int MinYVelocity = 2;
+        private new const int MinYVelocity = -2;
         private new const int MaxYVelocity = 9;
         private new const int damage = 30;
 

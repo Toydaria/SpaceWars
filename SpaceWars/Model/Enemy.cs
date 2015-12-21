@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SpaceWars.Interfaces;
-
-namespace SpaceWars.Model
+﻿namespace SpaceWars.Model
 {
+    using SpaceWars.Interfaces;
+
     public abstract class Enemy: GameObject, IEnemy
     {
         public int ScoringPoints { get; set; }

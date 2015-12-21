@@ -1,16 +1,16 @@
-﻿using System;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using SpaceWars.Interfaces;
-using SpaceWars.Model;
-
-namespace SpaceWars.GameObjects
+﻿namespace SpaceWars.GameObjects
 {
+    using System;
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+    using SpaceWars.Interfaces;
+    using SpaceWars.Model;
+
     public abstract class Asteroid : GameObject, IAsteroid
     {
         protected const int TextureWidth = 0; 
         protected const int TextureHeight = 0; 
-        protected const int UpCorner = - TextureWidth; // asteroid size
+        protected const int UpCorner = - 50; // asteroid size
         protected const int RightCorner = 800 - TextureWidth; // Screen width - asteroid width
         protected const int DownCorner = 950 - TextureHeight; // Screen height - asteroid height
         protected const int LeftCorner = 0;

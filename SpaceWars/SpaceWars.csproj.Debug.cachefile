@@ -6,9 +6,11 @@ Content\redfart.xnb
 Content\rocky.xnb
 Content\ShieldBonus.xnb
 Content\HealthBonus.xnb
-Content\startBackground.xnb
 Content\bigEnemy.xnb
 Content\littleEnemy.xnb
 Content\bigEnemyBullet.xnb
 Content\smallEnemyBullet.xnb
+Content\Gameover.xnb
+Content\Instructions.xnb
+Content\startBackground.xnb
 Content\spritefont.xnb

@@ -1,15 +1,8 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework.Content;
-using SpaceWars.Interfaces;
-using SpaceWars.Model;
-
-namespace SpaceWars.GameObjects.AsteroidsPack
+﻿namespace SpaceWars.GameObjects.AsteroidsPack
 {
+    using Microsoft.Xna.Framework;
+    using System;
+
     class RockyAsteroid : Asteroid
     {
         private new const int TextureWidth = 47;

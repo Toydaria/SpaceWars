@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SpaceWars.Interfaces;
-
-namespace SpaceWars
+﻿namespace SpaceWars
 {
+    using System;
+
     public class ScoreManager
     {
         private int totalScore = 0;

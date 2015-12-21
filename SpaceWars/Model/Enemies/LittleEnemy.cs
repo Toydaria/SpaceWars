@@ -13,7 +13,7 @@
     private const int DownCorner = 950 - 279; // Screen height - health bonus height
     private const int LeftCorner = 0;
     private const int ShootDelayConst = 50;
-    private const int scoringPoints = 2;
+    private int scoringPoints = 2;
     private int shootDelay = ShootDelayConst;
 
     public LittleEnemy()
