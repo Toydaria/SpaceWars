@@ -1,15 +1,14 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using SpaceWars.GameObjects;
-using SpaceWars.Interfaces;
-
-namespace SpaceWars.Core
+﻿namespace SpaceWars.Core
 {
+    using System;
+    using System.IO;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using Microsoft.Xna.Framework.Graphics;
+    using SpaceWars.GameObjects;
+    using SpaceWars.Interfaces;
+
     public class Data: IData
     {
         private readonly List<int> score = new List<int>();

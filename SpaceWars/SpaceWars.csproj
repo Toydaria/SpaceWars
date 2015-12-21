@@ -73,41 +73,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Data.cs" />
-    <Compile Include="GameObjects\Image.cs" />
-    <Compile Include="GameObjects\Stringer.cs" />
-    <Compile Include="Interfaces\IBullet.cs" />
-    <Compile Include="Interfaces\IData.cs" />
-    <Compile Include="Interfaces\IDestructible.cs" />
-    <Compile Include="Interfaces\IGiveScore.cs" />
-    <Compile Include="Model\Enemies\EnemyBullets\BigEnemyBullet.cs" />
-    <Compile Include="Model\Enemies\EnemyBullets\EnemyBullet.cs" />
-    <Compile Include="Model\Enemies\EnemyBullets\LittleEnemyBullet.cs" />
-    <Compile Include="ResourceManager.cs" />
-    <Compile Include="GameObjects\Bullet.cs" />
-    <Compile Include="GameObjects\Player.cs" />
-    <Compile Include="GameObjects\Starfield.cs" />
-    <Compile Include="Interfaces\IAsteroid.cs" />
-    <Compile Include="Interfaces\IBonus.cs" />
-    <Compile Include="Interfaces\IControl.cs" />
-    <Compile Include="Interfaces\IGameObject.cs" />
-    <Compile Include="Interfaces\IEnemy.cs" />
-    <Compile Include="Interfaces\IPlayer.cs" />
-    <Compile Include="Model\Asteroid.cs" />
-    <Compile Include="Model\AsteroidsPack\ChunkyAsteroid.cs" />
-    <Compile Include="Model\AsteroidsPack\RedFartAsteroid.cs" />
-    <Compile Include="Model\AsteroidsPack\RockyAsteroid.cs" />
-    <Compile Include="Model\Bonus.cs" />
-    <Compile Include="Model\Bonuses\HealthBonus.cs" />
-    <Compile Include="Model\Bonuses\ShieldBonus.cs" />
-    <Compile Include="Model\Enemies\BigEnemy.cs" />
-    <Compile Include="Model\Enemy.cs" />
-    <Compile Include="Model\GameObject.cs" />
-    <Compile Include="Model\Enemies\LittleEnemy.cs" />
-    <Compile Include="ObjectManager.cs" />
+    <Compile Include="Screens\Image.cs" />
+    <Compile Include="Screens\Stringer.cs" />
+    <Compile Include="Models\Contracts\IBullet.cs" />
+    <Compile Include="Models\Contracts\IData.cs" />
+    <Compile Include="Models\Contracts\IDestructible.cs" />
+    <Compile Include="Models\Contracts\IGiveScore.cs" />
+    <Compile Include="Models\Enemies\BigEnemyBullet.cs" />
+    <Compile Include="Models\Enemies\EnemyBullet.cs" />
+    <Compile Include="Models\Enemies\LittleEnemyBullet.cs" />
+    <Compile Include="Core\ResourceManager.cs" />
+    <Compile Include="Models\Player\Bullet.cs" />
+    <Compile Include="Models\Player\Player.cs" />
+    <Compile Include="Screens\Starfield.cs" />
+    <Compile Include="Models\Contracts\IAsteroid.cs" />
+    <Compile Include="Models\Contracts\IBonus.cs" />
+    <Compile Include="Models\Contracts\IControl.cs" />
+    <Compile Include="Models\Contracts\IGameObject.cs" />
+    <Compile Include="Models\Contracts\IEnemy.cs" />
+    <Compile Include="Models\Contracts\IPlayer.cs" />
+    <Compile Include="Models\Asteroids\Asteroid.cs" />
+    <Compile Include="Models\Asteroids\ChunkyAsteroid.cs" />
+    <Compile Include="Models\Asteroids\RedFartAsteroid.cs" />
+    <Compile Include="Models\Asteroids\RockyAsteroid.cs" />
+    <Compile Include="Models\Bonusses\Bonus.cs" />
+    <Compile Include="Models\Bonusses\HealthBonus.cs" />
+    <Compile Include="Models\Bonusses\ShieldBonus.cs" />
+    <Compile Include="Models\Enemies\BigEnemy.cs" />
+    <Compile Include="Models\Enemies\Enemy.cs" />
+    <Compile Include="Models\GameObject.cs" />
+    <Compile Include="Models\Enemies\LittleEnemy.cs" />
+    <Compile Include="Core\ObjectManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Engine.cs" />
-    <Compile Include="ScoreManager.cs" />
+    <Compile Include="Core\Engine.cs" />
+    <Compile Include="Core\ScoreManager.cs" />
     <Compile Include="Screens\GameOverScreen.cs" />
     <Compile Include="Screens\InstructionsScreen.cs" />
     <Compile Include="Screens\MainScreen.cs" />
@@ -155,6 +155,9 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
