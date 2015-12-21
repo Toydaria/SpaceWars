@@ -13,9 +13,7 @@ namespace SpaceWars.Core
     public class Data: IData
     {
         private readonly List<int> score = new List<int>();
-        private Stringer outputWriter = new Stringer(new Vector2(200, 450));
-        //private readonly Dictionary<int, int> score = new Dictionary<int, int
-        private string path = "../Core/highscore";
+        private string path = "";
         private SpriteBatch spriteBatch;
 
         public Data()
@@ -23,8 +21,8 @@ namespace SpaceWars.Core
             this.Score = score;
         }
 
-        public Stringer OutputWriter { get; }
-        public ICollection<int> Score { get; }
+        public Stringer OutputWriter { get; set; }
+        public ICollection<int> Score { get; set; }
      
         public void AddScore(int score)
         {
