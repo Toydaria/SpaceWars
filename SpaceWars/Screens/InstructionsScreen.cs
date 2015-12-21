@@ -1,35 +1,36 @@
 ﻿namespace SpaceWars.Screens
 {
-    using SpaceWars.Screens.ScreenManagement;
-    using SpaceWars.GameObjects;
-
     using Microsoft.Xna.Framework.Input;
+    using SpaceWars.GameObjects;
+    using SpaceWars.Screens.ScreenManagement;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
-    public class SplashScreen : GameScreen
+    public class InstructionsScreen : GameScreen
     {
-        Starfield Background = new Starfield();
-        Image Image = new Image("startBackground");
+        Starfield background = new Starfield();
+        Image gameOverStats = new Image("Instructions");
+        private int buttonDelay = 10;
+
 
         public override void LoadContent(Microsoft.Xna.Framework.Content.ContentManager Content)
         {
-            Background.LoadContent(Content);
-            Image.LoadConent(Content);
-
+            background.LoadContent(Content);
+            gameOverStats.LoadConent(Content);
             base.LoadContent(Content);
         }
 
         public override void UnloadContent()
         {
-            Background.UnloadContet();
-            Image.UnloadContent();
-
+            background.UnloadContet();
+            gameOverStats.UnloadContent();
             base.UnloadContent();
         }
 
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
-            Background.Update(gameTime);
-
             //Controls
             KeyboardState keyboard = Keyboard.GetState();
 
@@ -37,22 +38,32 @@
             {
                 ScreenManager.Instance.Engine.Exit();
             }
-            if (keyboard.IsKeyDown(Keys.Enter))
-            {
 
-                ScreenManager.Instance.ChangeScreen("InstructionsScreen");
+            if (buttonDelay == 0)
+            {
+                if (keyboard.IsKeyDown(Keys.Enter))
+                {
+                    ScreenManager.Instance.ChangeScreen("MainScreen");
+                }
             }
+            else
+            {
+                buttonDelay--;
+            }
+            
             //if (keyboard.IsKeyDown(Keys.H))
             //{
             //    ScreenManager.Instance.ChangeScreen("HighScore");
             //}
+
+            background.Update(gameTime);
             base.Update(gameTime);
         }
 
         public override void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch)
         {
-            Background.Draw(spriteBatch);
-            Image.Draw(spriteBatch);
+            background.Draw(spriteBatch);
+            gameOverStats.Draw(spriteBatch);
             base.Draw(spriteBatch);
         }
     }

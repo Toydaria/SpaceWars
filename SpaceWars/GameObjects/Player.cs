@@ -11,6 +11,7 @@ namespace SpaceWars.GameObjects
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
     using SpaceWars;
+    using SpaceWars.Screens.ScreenManagement;
 
     public class Player: GameObject, IDestructibleObject
     {
@@ -86,7 +87,7 @@ namespace SpaceWars.GameObjects
             //DONT REMOVE THIS
             HealthText.Text = "Health: " + this.Health;
             ShieldText.Text = "Shield: " + this.Shield;
-            ScoreText.Text = "Score:" + Owner.scoreManager.TotalScore;
+            ScoreText.Text = "Score:" + Owner.ScoreManager.TotalScore;
             Texture = resourceManager.GetResource("ship");
         }
 
@@ -98,7 +99,7 @@ namespace SpaceWars.GameObjects
             //Updating Text
             HealthText.Text = "Health: " + this.Health;
             ShieldText.Text = "Shield: " + this.Shield;
-            ScoreText.Text = "Score:" + Owner.scoreManager.TotalScore;
+            ScoreText.Text = "Score:" + Owner.ScoreManager.TotalScore;
 
             //Player Controls
             if (keyboard.IsKeyDown(Keys.A) && Position.X > LeftCorner)
@@ -174,9 +175,11 @@ namespace SpaceWars.GameObjects
                     Destroy();
       
             }
-
-            //Change the screen to GameOver screen
-
+                if (Health <= 0)
+                {
+                    //Change the screen to GameOver screen
+                    ScreenManager.Instance.ChangeScreen("GameOverScreen");
+                }
         }
 
         public void GiveHealth(int amount)

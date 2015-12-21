@@ -108,6 +108,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="ScoreManager.cs" />
+    <Compile Include="Screens\GameOverScreen.cs" />
+    <Compile Include="Screens\InstructionsScreen.cs" />
     <Compile Include="Screens\MainScreen.cs" />
     <Compile Include="Screens\ScreenManagement\GameScreen.cs" />
     <Compile Include="Screens\ScreenManagement\ScreenFactory.cs" />
@@ -121,6 +123,8 @@
     <Content Include="GameThumbnail.png">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
     </Content>
+    <Content Include="Loads\GameOverScreen.xml" />
+    <Content Include="Loads\InstructionsScreen.xml" />
     <Content Include="Loads\MainScreen.xml" />
     <Content Include="Loads\SplashScreen.xml" />
   </ItemGroup>

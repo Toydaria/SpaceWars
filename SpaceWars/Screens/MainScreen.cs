@@ -10,6 +10,7 @@ namespace SpaceWars.Screens
 
     using GameObjects;
     using ScreenManagement;
+    using Microsoft.Xna.Framework.Input;
 
     public class MainScreen : GameScreen
     {
@@ -34,6 +35,22 @@ namespace SpaceWars.Screens
 
         public override void Update(GameTime gameTime)
         {
+            KeyboardState keyboard = Keyboard.GetState();
+
+            if (keyboard.IsKeyDown(Keys.Escape))
+            {
+                ScreenManager.Instance.Engine.Exit();
+            }
+            if (keyboard.IsKeyDown(Keys.Enter))
+            {
+
+                ScreenManager.Instance.ChangeScreen("InstructionsScreen");
+            }
+            //if (keyboard.IsKeyDown(Keys.H))
+            //{
+            //    ScreenManager.Instance.ChangeScreen("HighScore");
+            //}
+
             objectManager.Update(gameTime);
             base.Update(gameTime);
         }
