@@ -47,9 +47,10 @@ namespace SpaceWars.GameObjects
             }
         }
 
-        public int ScoringPoints
+        public int ScoringPoints 
         {
             get { return this.scoringPoints; }
+            set { this.scoringPoints = value; }
         }
 
         public override void Intersect(IGameObject obj)
