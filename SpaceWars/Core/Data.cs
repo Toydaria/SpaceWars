@@ -1,16 +1,19 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using SpaceWars.GameObjects;
-using SpaceWars.Interfaces;
-
-namespace SpaceWars.Core
+﻿namespace SpaceWars.Core
 {
+<<<<<<< HEAD
     public static class Data
+=======
+    using System;
+    using System.IO;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using Microsoft.Xna.Framework.Graphics;
+    using SpaceWars.GameObjects;
+    using SpaceWars.Interfaces;
+
+    public class Data: IData
+>>>>>>> 9d2afe244814bf85bae12893572a22e18354d0b1
     {
         private static readonly List<int> score = new List<int>();
         private static string path = "Core/highscore.txt";
