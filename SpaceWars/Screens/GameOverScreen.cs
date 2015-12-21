@@ -1,32 +1,31 @@
 ﻿namespace SpaceWars.Screens
 {
-    using Microsoft.Xna.Framework;
-    using Microsoft.Xna.Framework.Graphics;
+    using SpaceWars.Screens.ScreenManagement;
     using GameObjects;
-    using ScreenManagement;
     using Microsoft.Xna.Framework.Input;
+    using Microsoft.Xna.Framework;
 
-    public class MainScreen : GameScreen
+    public class GameOverScreen : GameScreen
     {
-        Starfield bakcground = new Starfield();
-        Player player = new Player();
-        ObjectManager objectManager = new ObjectManager();
+        Starfield background = new Starfield();
+        Image gameOverStats = new Image("Gameover");
+
 
         public override void LoadContent(Microsoft.Xna.Framework.Content.ContentManager Content)
         {
-            bakcground.LoadContent(Content);
-            objectManager.LoadContent(Content);
-            objectManager.AddObject(player);
+            background.LoadContent(Content);
+            gameOverStats.LoadConent(Content);
             base.LoadContent(Content);
         }
 
         public override void UnloadContent()
         {
-            bakcground.UnloadContet();
+            background.UnloadContet();
+            gameOverStats.UnloadContent();
             base.UnloadContent();
         }
 
-        public override void Update(GameTime gameTime)
+        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
             //Controls
             KeyboardState keyboard = Keyboard.GetState();
@@ -37,22 +36,21 @@
             }
             if (keyboard.IsKeyDown(Keys.Enter))
             {
-
-                //ScreenManager.Instance.ChangeScreen("InstructionsScreen");
+                ScreenManager.Instance.ChangeScreen("SplashScreen");
             }
             //if (keyboard.IsKeyDown(Keys.H))
             //{
             //    ScreenManager.Instance.ChangeScreen("HighScore");
             //}
 
-            objectManager.Update(gameTime);
+            background.Update(gameTime);
             base.Update(gameTime);
         }
 
-        public override void Draw(SpriteBatch spriteBatch)
+        public override void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch)
         {
-            bakcground.Draw(spriteBatch);
-            objectManager.Draw(spriteBatch);
+            background.Draw(spriteBatch);
+            gameOverStats.Draw(spriteBatch);
             base.Draw(spriteBatch);
         }
     }

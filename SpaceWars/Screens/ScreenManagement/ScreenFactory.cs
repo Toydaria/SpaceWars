@@ -13,6 +13,11 @@
 
                 case "SplashScreen":
                     return new SplashScreen();
+
+                case "GameOverScreen":
+                    return new GameOverScreen();
+                case "InstructionsScreen":
+                    return new InstructionsScreen();
                 default:
                     throw new InvalidOperationException("This screen doesen't exist.");
 

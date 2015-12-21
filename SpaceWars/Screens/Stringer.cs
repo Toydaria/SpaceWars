@@ -2,8 +2,9 @@
 {
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
+    using SpaceWars.Model;
 
-    public class Stringer
+    public class Stringer 
     {
         private SpriteFont spriteFont;
         private Vector2 Position { get; set; }
@@ -14,7 +15,7 @@
             this.Position = position;
         }
 
-        public void LoadContent(ResourceManager resourceManager)
+        public  void LoadContent(ResourceManager resourceManager)
         {
             spriteFont = resourceManager.GetSpriteFont();
         }
@@ -23,5 +24,6 @@
         {
             spriteBatch.DrawString(spriteFont, Text, Position, Color.White);
         }
+
     }
 }

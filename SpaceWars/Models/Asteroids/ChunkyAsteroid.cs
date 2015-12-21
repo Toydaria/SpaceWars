@@ -9,7 +9,7 @@
         private new const int TextureHeight = 38;
         private new const int MinXVelocity = -3;
         private new const int MaxXVelocity = 3;
-        private new const int MinYVelocity = 2;
+        private new const int MinYVelocity = -2;
         private new const int MaxYVelocity = 9;
         private new const int damage = 30;
 

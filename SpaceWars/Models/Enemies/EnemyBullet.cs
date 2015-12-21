@@ -9,7 +9,7 @@
     {
         //private static readonly Vector2 UP = new Vector2(0, -30);
         private const int LeftCorner = 0;
-        private const int RightCorner = 700;
+        private const int RightCorner = 800;
         private const int UpCorner = 0;
         private const int DownCorner = 1000;
 

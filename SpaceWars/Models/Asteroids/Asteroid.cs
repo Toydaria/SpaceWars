@@ -10,7 +10,7 @@
     {
         protected const int TextureWidth = 0; 
         protected const int TextureHeight = 0; 
-        protected const int UpCorner = - TextureWidth; // asteroid size
+        protected const int UpCorner = - 50; // asteroid size
         protected const int RightCorner = 800 - TextureWidth; // Screen width - asteroid width
         protected const int DownCorner = 950 - TextureHeight; // Screen height - asteroid height
         protected const int LeftCorner = 0;

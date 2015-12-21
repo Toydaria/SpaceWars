@@ -6,6 +6,7 @@
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
     using SpaceWars;
+    using SpaceWars.Screens.ScreenManagement;
 
     public class Player: GameObject, IDestructibleObject, IPlayer
     {
@@ -43,7 +44,7 @@
             Speed = new Vector2(0,0);
           
             Health = 100;
-            Shield = 100;
+            Shield = 0;
         }
 
         public int Health
@@ -169,9 +170,11 @@
                     Destroy();
       
             }
-
-            //Change the screen to GameOver screen
-
+                if (Health <= 0)
+                {
+                    //Change the screen to GameOver screen
+                    ScreenManager.Instance.ChangeScreen("GameOverScreen");
+                }
         }
 
         public void GiveHealth(int amount)
