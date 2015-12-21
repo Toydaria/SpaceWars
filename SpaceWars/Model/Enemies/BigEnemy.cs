@@ -25,8 +25,6 @@
             this.Speed = new Vector2(0, 2);
 
             this.BoundingBox = new Rectangle((int)Position.X, (int)Position.Y, 100, 131);
-
-
         }
 
         public override void OnGetEnemy(IGameObject obj)

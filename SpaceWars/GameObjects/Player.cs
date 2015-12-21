@@ -1,19 +1,14 @@
-﻿using System;
-using SpaceWars.Interfaces;
-using SpaceWars.Model;
-
-namespace SpaceWars.GameObjects
+﻿namespace SpaceWars.GameObjects
 {
-    using System.Collections.Generic;
-
     using Microsoft.Xna.Framework;
-    using Microsoft.Xna.Framework.Content;
+    using SpaceWars.Interfaces;
+    using SpaceWars.Model;
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
     using SpaceWars;
     using SpaceWars.Screens.ScreenManagement;
 
-    public class Player: GameObject, IDestructibleObject
+    public class Player: GameObject, IDestructibleObject, IPlayer
     {
         private static readonly Vector2 UP = new Vector2(0, -10);
         private static readonly Vector2 DOWN = new Vector2(0, 10);
@@ -49,7 +44,7 @@ namespace SpaceWars.GameObjects
             Speed = new Vector2(0,0);
           
             Health = 100;
-            Shield = 100;
+            Shield = 0;
         }
 
         public int Health
@@ -87,7 +82,7 @@ namespace SpaceWars.GameObjects
             //DONT REMOVE THIS
             HealthText.Text = "Health: " + this.Health;
             ShieldText.Text = "Shield: " + this.Shield;
-            ScoreText.Text = "Score:" + Owner.ScoreManager.TotalScore;
+            ScoreText.Text = "Score:" + Owner.scoreManager.TotalScore;
             Texture = resourceManager.GetResource("ship");
         }
 
@@ -99,7 +94,7 @@ namespace SpaceWars.GameObjects
             //Updating Text
             HealthText.Text = "Health: " + this.Health;
             ShieldText.Text = "Shield: " + this.Shield;
-            ScoreText.Text = "Score:" + Owner.ScoreManager.TotalScore;
+            ScoreText.Text = "Score:" + Owner.scoreManager.TotalScore;
 
             //Player Controls
             if (keyboard.IsKeyDown(Keys.A) && Position.X > LeftCorner)

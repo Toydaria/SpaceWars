@@ -1,14 +1,7 @@
 ﻿namespace SpaceWars.Screens.ScreenManagement
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-
     using Xml;
-    using GameObjects;
     using Screens;
-
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Content;
     using Microsoft.Xna.Framework.Graphics;
@@ -39,14 +32,7 @@
 
         public void ChangeScreen(string screenName)
         {
-            //newScreen = new TestMenu();
-            //xmlGameScreenManager = new XmlManager<GameScreen>();
-            //xmlGameScreenManager.Type = newScreen.Type;
-            //newScreen = xmlGameScreenManager.Load("Loads/" + screenName);
-            //currentScreen = newScreen;
-            //currentScreen.LoadContent(Content);
             newScreen = ScreenFactory.CreateScreen(screenName);
-            //newScreen = (GameScreen)Activator.CreateInstance(Type.GetType("Toydaria.Screens." + screenName));
             xmlGameScreenManager = new XmlManager<GameScreen>();
             xmlGameScreenManager.Type = newScreen.Type;
             currentScreen.UnloadContent();

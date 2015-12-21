@@ -1,4 +1,4 @@
-﻿using SpaceWars.Core;
+﻿
 
 namespace SpaceWars
 {
@@ -13,6 +13,7 @@ namespace SpaceWars
     using SpaceWars.GameObjects.AsteroidsPack;
     using SpaceWars.GameObjects;
     using SpaceWars.Model.Bonuses;
+    using SpaceWars.Core;
    
 
     public class ObjectManager
@@ -24,7 +25,7 @@ namespace SpaceWars
         private const int BonusPeriod = 3750;
         private int elapsedEnemyTime = 0;
         private const int EnemyPeriod = 4000;
-        public ScoreManager ScoreManager = new ScoreManager();
+        public ScoreManager scoreManager = new ScoreManager();
         public Data data = new Data();
         public ResourceManager ResourceMgr { get; set; }
 
@@ -84,6 +85,7 @@ namespace SpaceWars
                 }
             }
         }
+
 
         public void Move()
         {

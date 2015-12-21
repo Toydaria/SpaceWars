@@ -1,13 +1,7 @@
-﻿using SpaceWars.GameObjects.AsteroidsPack;
-using SpaceWars.Model.Bonuses;
-
-namespace SpaceWars.Screens
+﻿namespace SpaceWars.Screens
 {
-    using System.Collections.Generic;
-
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
-
     using GameObjects;
     using ScreenManagement;
     using Microsoft.Xna.Framework.Input;
@@ -16,7 +10,6 @@ namespace SpaceWars.Screens
     {
         Starfield bakcground = new Starfield();
         Player player = new Player();
-       // Asteroids asteroid = new Asteroids();
         ObjectManager objectManager = new ObjectManager();
 
         public override void LoadContent(Microsoft.Xna.Framework.Content.ContentManager Content)
@@ -35,6 +28,7 @@ namespace SpaceWars.Screens
 
         public override void Update(GameTime gameTime)
         {
+            //Controls
             KeyboardState keyboard = Keyboard.GetState();
 
             if (keyboard.IsKeyDown(Keys.Escape))
@@ -44,7 +38,7 @@ namespace SpaceWars.Screens
             if (keyboard.IsKeyDown(Keys.Enter))
             {
 
-                ScreenManager.Instance.ChangeScreen("InstructionsScreen");
+                //ScreenManager.Instance.ChangeScreen("InstructionsScreen");
             }
             //if (keyboard.IsKeyDown(Keys.H))
             //{

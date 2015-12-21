@@ -1,17 +1,15 @@
 ﻿namespace SpaceWars.Screens
 {
     using SpaceWars.Screens.ScreenManagement;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
     using GameObjects;
+    using Microsoft.Xna.Framework.Input;
+    using Microsoft.Xna.Framework;
 
     public class GameOverScreen : GameScreen
     {
         Starfield background = new Starfield();
         Image gameOverStats = new Image("Gameover");
-        
+
 
         public override void LoadContent(Microsoft.Xna.Framework.Content.ContentManager Content)
         {
@@ -29,6 +27,22 @@
 
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
+            //Controls
+            KeyboardState keyboard = Keyboard.GetState();
+
+            if (keyboard.IsKeyDown(Keys.Escape))
+            {
+                ScreenManager.Instance.Engine.Exit();
+            }
+            if (keyboard.IsKeyDown(Keys.Enter))
+            {
+                ScreenManager.Instance.ChangeScreen("SplashScreen");
+            }
+            //if (keyboard.IsKeyDown(Keys.H))
+            //{
+            //    ScreenManager.Instance.ChangeScreen("HighScore");
+            //}
+
             background.Update(gameTime);
             base.Update(gameTime);
         }

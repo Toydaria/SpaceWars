@@ -1,5 +1,3 @@
-using System;
-
 namespace SpaceWars
 {
 #if WINDOWS || XBOX

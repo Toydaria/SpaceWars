@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mime;
-using System.Text;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
-using SpaceWars.GameObjects;
-using SpaceWars.Interfaces;
-
-namespace SpaceWars.Model.Bonuses
+﻿namespace SpaceWars.Model.Bonuses
 {
+    using System;
+    using Microsoft.Xna.Framework;
+    using SpaceWars.GameObjects;
+    using SpaceWars.Interfaces;
+
     public class ShieldBonus: Bonus
     {
+
+
         private const int UpCorner = -40; // health bonus size
         private const int RightCorner = 800 - 40; // Screen width - health bonus width
         private const int DownCorner = 950 - 40; // Screen height - health bonus height

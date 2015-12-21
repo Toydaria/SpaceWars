@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mime;
-using System.Text;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
-using SpaceWars.GameObjects;
-using SpaceWars.Interfaces;
-
-namespace SpaceWars.Model.Bonuses
+﻿namespace SpaceWars.Model.Bonuses
 {
+
+    using System;
+    using Microsoft.Xna.Framework;
+    using SpaceWars.GameObjects;
+    using SpaceWars.Interfaces;
+
     class HealthBonus: Bonus
     {
 

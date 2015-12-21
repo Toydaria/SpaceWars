@@ -1,11 +1,11 @@
-﻿using System;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using SpaceWars.Interfaces;
-using SpaceWars.Model;
-
-namespace SpaceWars.GameObjects
+﻿namespace SpaceWars.GameObjects
 {
+    using System;
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+    using SpaceWars.Interfaces;
+    using SpaceWars.Model;
+
     public abstract class Asteroid : GameObject, IAsteroid
     {
         protected const int TextureWidth = 0; 
