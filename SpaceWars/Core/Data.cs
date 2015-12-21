@@ -13,7 +13,7 @@ namespace SpaceWars.Core
     public class Data: IData
     {
         private readonly List<int> score = new List<int>();
-        private string path = "";
+        private string path = "Core/highscore.txt";
         private SpriteBatch spriteBatch;
 
         public Data()
@@ -33,7 +33,7 @@ namespace SpaceWars.Core
             }
         }
 
-        //this method loads all the scores from a file to a List and sorts them, it is called internally in PrintScores method
+        //this method loads all the scores from a file to a List, it is called internally in PrintScores method
 
         private void LoadScore()
         {
@@ -59,12 +59,21 @@ namespace SpaceWars.Core
                 int index = 1;
                 foreach (int score in sortedScores)
                 {
-                    output.AppendFormat("{0} [{1}]{2}", index,  score, Environment.NewLine);
+                    output.AppendFormat("{0:10}  {1:10}  {2}", index,  score, Environment.NewLine);
                     index++;
                 }
             }
             OutputWriter.Draw(spriteBatch);
         }
+
+
+        public int GetLastScore()
+        {
+            LoadScore();
+            int lastScore = Score.Last();
+            return lastScore;
+        }
+    }
 
     }
 }
