@@ -7,6 +7,7 @@
     using Microsoft.Xna.Framework.Input;
     using SpaceWars;
     using SpaceWars.Screens.ScreenManagement;
+using SpaceWars.Core;
 
     public class Player: GameObject, IDestructibleObject, IPlayer
     {
@@ -35,6 +36,8 @@
         private Stringer HealthText = new Stringer(new Vector2(300, 200));
         private Stringer ShieldText = new Stringer(new Vector2(150, 200));
         private Stringer ScoreText = new Stringer(new Vector2(450, 200));
+
+        public Stats Stats { get; set; }
         
         public Player()
         {
@@ -45,6 +48,7 @@
           
             Health = 100;
             Shield = 0;
+            this.Stats = new Stats(this);
         }
 
         public int Health
