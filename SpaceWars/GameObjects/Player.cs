@@ -91,10 +91,13 @@
             //Getting the keyboardState
             KeyboardState keyboard = Keyboard.GetState();
 
-            //Updating Text
-            HealthText.Text = "Health: " + this.Health;
+            //Updating Texts
+            HealthText.Text =  "Health: " + this.Health;
             ShieldText.Text = "Shield: " + this.Shield;
             ScoreText.Text = "Score:" + Owner.scoreManager.TotalScore;
+
+
+
 
             //Player Controls
             if (keyboard.IsKeyDown(Keys.A) && Position.X > LeftCorner)

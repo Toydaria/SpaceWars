@@ -9,10 +9,12 @@
         private SpriteFont spriteFont;
         private Vector2 Position { get; set; }
         public string Text { get; set; }
+        public Color Color { get; set; }
 
         public Stringer(Vector2 position)
         {
             this.Position = position;
+            this.Color = Color.White;
         }
 
         public  void LoadContent(ResourceManager resourceManager)
@@ -22,8 +24,7 @@
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(spriteFont, Text, Position, Color.White);
+            spriteBatch.DrawString(spriteFont, Text, Position, Color);
         }
-
     }
 }
