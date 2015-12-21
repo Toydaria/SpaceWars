@@ -1,4 +1,5 @@
-﻿using SpaceWars.Interfaces;
+﻿using System;
+using SpaceWars.Interfaces;
 using SpaceWars.Model;
 
 namespace SpaceWars.GameObjects
@@ -29,7 +30,8 @@ namespace SpaceWars.GameObjects
         private Vector2 downTemp;
         private Vector2 leftTemp;
         private Vector2 rightTemp;
-
+        private int health;
+        private int shield;
 
         private int elapsedShootTime = 0;
         private const int MaxShield = 100;
@@ -37,13 +39,7 @@ namespace SpaceWars.GameObjects
         private Stringer HealthText = new Stringer(new Vector2(300, 200));
         private Stringer ShieldText = new Stringer(new Vector2(150, 200));
         private Stringer ScoreText = new Stringer(new Vector2(450, 200));
-
-        public int Health { get; set; }
         
-        public int Shield { get; set; }
-        
-        
-
         public Player()
         {
             //Texture = null;
@@ -52,11 +48,35 @@ namespace SpaceWars.GameObjects
             Speed = new Vector2(0,0);
           
             Health = 100;
-            Damage = 100;
+            Shield = 100;
         }
 
-        public int Damage { get; set; }
-        
+        public int Health
+        {
+            get { return this.health; }
+            set
+            {
+                if (value < MinHealth)
+                {
+                    value = MinHealth;
+                }
+                this.health = value;
+            }
+        }
+
+        public int Shield
+        {
+            get { return this.shield; }
+            set
+            {
+                if (value < 0)
+                {
+                    value = 0;
+                }
+                this.shield = value;
+            }
+        }
+
 
         public override void LoadContent(ResourceManager resourceManager)
         {
@@ -66,7 +86,7 @@ namespace SpaceWars.GameObjects
             //DONT REMOVE THIS
             HealthText.Text = "Health: " + this.Health;
             ShieldText.Text = "Shield: " + this.Shield;
-            ScoreText.Text = "Score:" + Owner.ScoreManager.TotalScore;
+            ScoreText.Text = "Score:" + Owner.scoreManager.TotalScore;
             Texture = resourceManager.GetResource("ship");
         }
 
@@ -78,7 +98,7 @@ namespace SpaceWars.GameObjects
             //Updating Text
             HealthText.Text = "Health: " + this.Health;
             ShieldText.Text = "Shield: " + this.Shield;
-            ScoreText.Text = "Score:" + Owner.ScoreManager.TotalScore;
+            ScoreText.Text = "Score:" + Owner.scoreManager.TotalScore;
 
             //Player Controls
             if (keyboard.IsKeyDown(Keys.A) && Position.X > LeftCorner)
@@ -152,7 +172,8 @@ namespace SpaceWars.GameObjects
                 {
                     Health = 0;
                     Destroy();
-                }
+      
+            }
 
             //Change the screen to GameOver screen
 
@@ -167,10 +188,7 @@ namespace SpaceWars.GameObjects
         {
             Owner.RemoveObject(this);
             //TODO   when the screen is GameOver -> Show Score =>  Owner.ScoreManager.ScoringPoints;
-            int score = Owner.ScoreManager.TotalScore;
-            Owner.data.AddScore(score);
-            Owner.data.PrintScore();
-            // End of the game
+            //End of the game
         }
 
         public override void Draw(SpriteBatch spriteBatch)
