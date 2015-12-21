@@ -8,7 +8,7 @@ namespace SpaceWars.Model
 {
     public abstract class Enemy: GameObject, IEnemy
     {
-        public int ScoringPoints { get; }
+        public int ScoringPoints { get; set; }
 
         public abstract void OnGetEnemy(IGameObject obj);
 
