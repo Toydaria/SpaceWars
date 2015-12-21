@@ -1,5 +1,4 @@
-﻿
-namespace SpaceWars.Interfaces
+﻿namespace SpaceWars.Interfaces
 {
     public interface IDestructibleObject
     {

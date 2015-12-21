@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace SpaceWars.Screens.ScreenManagement
+﻿namespace SpaceWars.Screens.ScreenManagement
 {
+    using System;
+
     public static class ScreenFactory
     {
         public static GameScreen CreateScreen(string screenName)

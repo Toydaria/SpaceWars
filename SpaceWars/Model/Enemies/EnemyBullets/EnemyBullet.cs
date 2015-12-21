@@ -2,12 +2,10 @@
 {
     using SpaceWars.GameObjects;
     using SpaceWars.Interfaces;
-
     using Microsoft.Xna.Framework;
-    using Microsoft.Xna.Framework.Content;
-    using Microsoft.Xna.Framework.Graphics;
+    
 
-    public abstract class EnemyBullet : GameObject
+    public abstract class EnemyBullet : GameObject, IBullet
     {
         //private static readonly Vector2 UP = new Vector2(0, -30);
         private const int LeftCorner = 0;

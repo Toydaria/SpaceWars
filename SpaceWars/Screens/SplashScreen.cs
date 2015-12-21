@@ -40,10 +40,7 @@
             {
                 ScreenManager.Instance.ChangeScreen("MainScreen");
             }
-            //if (keyboard.IsKeyDown(Keys.H))
-            //{
-            //    ScreenManager.Instance.ChangeScreen("HighScore");
-            //}
+            
             base.Update(gameTime);
         }
 

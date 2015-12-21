@@ -1,8 +1,5 @@
-﻿using Microsoft.Xna.Framework.Content;
-
-namespace SpaceWars.Model
+﻿namespace SpaceWars.Model
 {
-
     using SpaceWars.Interfaces;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;

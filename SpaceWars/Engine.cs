@@ -1,20 +1,10 @@
 namespace SpaceWars
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
     using Microsoft.Xna.Framework;
-
     using Screens.ScreenManagement;
-
-    using Microsoft.Xna.Framework.Audio;
-    using Microsoft.Xna.Framework.Content;
-    using Microsoft.Xna.Framework.GamerServices;
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
-    using Microsoft.Xna.Framework.Media;
-
-
+    
     public class Engine : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;

@@ -1,18 +1,13 @@
-﻿using System;
-using SpaceWars.Interfaces;
-using SpaceWars.Model;
-
-namespace SpaceWars.GameObjects
+﻿namespace SpaceWars.GameObjects
 {
-    using System.Collections.Generic;
-
     using Microsoft.Xna.Framework;
-    using Microsoft.Xna.Framework.Content;
+    using SpaceWars.Interfaces;
+    using SpaceWars.Model;
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
     using SpaceWars;
 
-    public class Player: GameObject, IDestructibleObject
+    public class Player: GameObject, IDestructibleObject, IPlayer
     {
         private static readonly Vector2 UP = new Vector2(0, -10);
         private static readonly Vector2 DOWN = new Vector2(0, 10);

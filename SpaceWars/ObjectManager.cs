@@ -1,4 +1,4 @@
-﻿using SpaceWars.Core;
+﻿
 
 namespace SpaceWars
 {
@@ -13,6 +13,7 @@ namespace SpaceWars
     using SpaceWars.GameObjects.AsteroidsPack;
     using SpaceWars.GameObjects;
     using SpaceWars.Model.Bonuses;
+    using SpaceWars.Core;
    
 
     public class ObjectManager

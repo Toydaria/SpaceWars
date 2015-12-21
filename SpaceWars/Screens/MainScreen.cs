@@ -1,13 +1,7 @@
-﻿using SpaceWars.GameObjects.AsteroidsPack;
-using SpaceWars.Model.Bonuses;
-
-namespace SpaceWars.Screens
+﻿namespace SpaceWars.Screens
 {
-    using System.Collections.Generic;
-
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
-
     using GameObjects;
     using ScreenManagement;
 
@@ -15,7 +9,6 @@ namespace SpaceWars.Screens
     {
         Starfield bakcground = new Starfield();
         Player player = new Player();
-       // Asteroids asteroid = new Asteroids();
         ObjectManager objectManager = new ObjectManager();
 
         public override void LoadContent(Microsoft.Xna.Framework.Content.ContentManager Content)

@@ -1,17 +1,10 @@
-﻿using SpaceWars.Interfaces;
-using SpaceWars.Model;
-using SpaceWars.Model.Enemies.EnemyBullets;
-
-namespace SpaceWars.GameObjects
+﻿namespace SpaceWars.GameObjects
 {
-    using System.Collections.Generic;
-
+    using SpaceWars.Interfaces;
+    using SpaceWars.Model;
     using Microsoft.Xna.Framework;
-    using Microsoft.Xna.Framework.Graphics;
-    using Microsoft.Xna.Framework.Content;
-    using AsteroidsPack;
 
-    public class Bullet: GameObject
+    public class Bullet: GameObject, IBullet
     {
         //Stefka: cropped the png of the laser and added TextureWidth and TextureHight = 64(the size of the png) and changed the values in the constructor, because they were 5 X 5 - the reason why asteroids were shot only from the right
         private const int TextureWidth = 64;
@@ -68,11 +61,6 @@ namespace SpaceWars.GameObjects
             if (needToRemove)
                 Owner.RemoveObject(this);
         }
-
-
-
-
         
-
     }
 }
