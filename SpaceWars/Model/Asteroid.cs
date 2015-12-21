@@ -22,7 +22,7 @@ namespace SpaceWars.GameObjects
         protected static Random rand = new Random();
         protected Vector2 origin;
         protected float rotationAngle = rand.Next(0, 180);
-        private const int scoringPoints = 1;
+        private int scoringPoints = 1;
 
         protected Asteroid(int damage)
         {
@@ -47,7 +47,10 @@ namespace SpaceWars.GameObjects
             }
         }
 
-        public int ScoringPoints => scoringPoints;
+        public int ScoringPoints
+        {
+            get { return this.scoringPoints; }
+        }
 
         public override void Intersect(IGameObject obj)
         {
