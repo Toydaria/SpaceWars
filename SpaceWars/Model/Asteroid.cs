@@ -33,7 +33,7 @@ namespace SpaceWars.GameObjects
             BoundingBox = new Rectangle((int)Position.X, (int)Position.Y, TextureWidth, TextureHeight);
         }
 
-        public int Damage { get; }
+        public int Damage { get; set; }
         public Vector2 Origin
         {
             get { return this.origin; }
