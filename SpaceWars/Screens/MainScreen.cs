@@ -46,6 +46,7 @@
             //}
 
             objectManager.Update(gameTime);
+            bakcground.Update(gameTime);
             base.Update(gameTime);
         }
 

@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Data.cs" />
+    <Compile Include="Core\Stats.cs" />
     <Compile Include="Screens\Image.cs" />
     <Compile Include="Screens\Stringer.cs" />
     <Compile Include="Models\Contracts\IBullet.cs" />

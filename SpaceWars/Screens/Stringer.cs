@@ -1,6 +1,7 @@
 ﻿namespace SpaceWars.GameObjects
 {
     using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Content;
     using Microsoft.Xna.Framework.Graphics;
     using SpaceWars.Model;
 
@@ -17,9 +18,19 @@
             this.Color = Color.White;
         }
 
-        public  void LoadContent(ResourceManager resourceManager)
+        public void LoadContent(ResourceManager resourceManager)
         {
-            spriteFont = resourceManager.GetSpriteFont();
+            spriteFont = resourceManager.GetSpriteFont("spritefont");
+        }
+
+        public void LoadContent(ContentManager Content)
+        {
+            spriteFont = Content.Load<SpriteFont>("spritefont");
+        }
+
+        public void ScoreLoadContent(ContentManager Content)
+        {
+            spriteFont = Content.Load<SpriteFont>("scorefont");
         }
 
         public void Draw(SpriteBatch spriteBatch)

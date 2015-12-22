@@ -1,6 +1,8 @@
 ﻿namespace SpaceWars.Screens
 {
     using SpaceWars.Screens.ScreenManagement;
+    using SpaceWars.Core;
+
     using GameObjects;
     using Microsoft.Xna.Framework.Input;
     using Microsoft.Xna.Framework;
@@ -9,10 +11,14 @@
     {
         Starfield background = new Starfield();
         Image gameOverStats = new Image("Gameover");
+        Stringer score = new Stringer(new Vector2(415, 481));
 
 
         public override void LoadContent(Microsoft.Xna.Framework.Content.ContentManager Content)
         {
+            score.Text = Data.GetLastScore().ToString();
+            score.Color = Color.LightGray;
+            score.ScoreLoadContent(Content);
             background.LoadContent(Content);
             gameOverStats.LoadConent(Content);
             base.LoadContent(Content);
@@ -51,6 +57,7 @@
         {
             background.Draw(spriteBatch);
             gameOverStats.Draw(spriteBatch);
+            score.Draw(spriteBatch);
             base.Draw(spriteBatch);
         }
     }

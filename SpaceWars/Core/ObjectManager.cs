@@ -1,6 +1,4 @@
-﻿
-
-namespace SpaceWars
+﻿namespace SpaceWars
 {
     using System;
     using System.Collections.Generic;
@@ -26,7 +24,6 @@ namespace SpaceWars
         private int elapsedEnemyTime = 0;
         private const int EnemyPeriod = 4000;
         public ScoreManager scoreManager = new ScoreManager();
-        public Data data = new Data();
         public ResourceManager ResourceMgr { get; set; }
 
 

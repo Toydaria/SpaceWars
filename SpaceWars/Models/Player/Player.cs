@@ -33,9 +33,9 @@ using SpaceWars.Core;
         private int elapsedShootTime = 0;
         private const int MaxShield = 100;
 
-        private Stringer HealthText = new Stringer(new Vector2(300, 200));
-        private Stringer ShieldText = new Stringer(new Vector2(150, 200));
-        private Stringer ScoreText = new Stringer(new Vector2(450, 200));
+        //private Stringer HealthText = new Stringer(new Vector2(300, 200));
+        //private Stringer ShieldText = new Stringer(new Vector2(150, 200));
+        //private Stringer ScoreText = new Stringer(new Vector2(450, 200));
 
         public Stats Stats { get; set; }
         
@@ -80,13 +80,14 @@ using SpaceWars.Core;
 
         public override void LoadContent(ResourceManager resourceManager)
         {
-            HealthText.LoadContent(resourceManager);
-            ShieldText.LoadContent(resourceManager);
-            ScoreText.LoadContent(resourceManager);
+            Stats.HealthText.Text = "Health: " + this.Health;
+            Stats.ShieldText.Text = "Shield: " + this.Shield;
+            Stats.ScoreText.Text = "Score: " + Owner.scoreManager.TotalScore;
+            Stats.LoadContent(resourceManager);
             //DONT REMOVE THIS
-            HealthText.Text = "Health: " + this.Health;
-            ShieldText.Text = "Shield: " + this.Shield;
-            ScoreText.Text = "Score:" + Owner.scoreManager.TotalScore;
+            //HealthText.Text = "Health: " + this.Health;
+            //ShieldText.Text = "Shield: " + this.Shield;
+            //ScoreText.Text = "Score:" + Owner.scoreManager.TotalScore;
             Texture = resourceManager.GetResource("ship");
         }
 
@@ -96,9 +97,9 @@ using SpaceWars.Core;
             KeyboardState keyboard = Keyboard.GetState();
 
             //Updating Texts
-            HealthText.Text =  "Health: " + this.Health;
-            ShieldText.Text = "Shield: " + this.Shield;
-            ScoreText.Text = "Score:" + Owner.scoreManager.TotalScore;
+            Stats.HealthText.Text =  "Health: " + this.Health;
+            Stats.ShieldText.Text = "Shield: " + this.Shield;
+            Stats.ScoreText.Text = "Score: " + Owner.scoreManager.TotalScore;
 
 
 
@@ -192,6 +193,8 @@ using SpaceWars.Core;
         public  void Destroy()
         {
             Owner.RemoveObject(this);
+            int score = Owner.scoreManager.TotalScore;
+            Data.AddScore(score);
             //TODO   when the screen is GameOver -> Show Score =>  Owner.ScoreManager.ScoringPoints;
             //End of the game
         }
@@ -199,9 +202,10 @@ using SpaceWars.Core;
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(Texture, Position, Color.White);
-            HealthText.Draw(spriteBatch);
-            ShieldText.Draw(spriteBatch);
-            ScoreText.Draw(spriteBatch);
+            Stats.Draw(spriteBatch);
+            //HealthText.Draw(spriteBatch);
+            //ShieldText.Draw(spriteBatch);
+            //ScoreText.Draw(spriteBatch);
         }
 
         void Shoot()
