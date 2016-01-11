@@ -1,33 +1,36 @@
-﻿namespace SpaceWars.Screens
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Input;
+using SpaceWars.Core;
+using SpaceWars.GameObjects;
+using SpaceWars.Screens.ScreenManagement;
+
+namespace SpaceWars.Screens
 {
-    using SpaceWars.Screens.ScreenManagement;
-    using SpaceWars.Core;
-
-    using GameObjects;
-    using Microsoft.Xna.Framework.Input;
-    using Microsoft.Xna.Framework;
-
-    public class GameOverScreen : GameScreen
+    public class HighscoreScreen : GameScreen
     {
         Starfield background = new Starfield();
-        Image gameOverStats = new Image("Gameover");
-        Stringer score = new Stringer(new Vector2(415, 481));
+        Image highScoreStats = new Image("Highscore");
+        Stringer highscoreWriter = new Stringer(new Vector2(300, 300));
 
-
-        public override void LoadContent(Microsoft.Xna.Framework.Content.ContentManager Content)
+        public override void LoadContent(ContentManager Content)
         {
-            score.Text = Data.GetLastScore().ToString();
-            score.Color = Color.LightGray;
-            score.ScoreLoadContent(Content);
+            highscoreWriter.Text = Data.GetHighScore();
+            highscoreWriter.Color = Color.LightGray;
+            highscoreWriter.ScoreLoadContent(Content);
             background.LoadContent(Content);
-            gameOverStats.LoadConent(Content);
+            highScoreStats.LoadConent(Content);
             base.LoadContent(Content);
         }
 
         public override void UnloadContent()
         {
             background.UnloadContet();
-            gameOverStats.UnloadContent();
+            highScoreStats.UnloadContent();
             base.UnloadContent();
         }
 
@@ -44,11 +47,7 @@
             {
                 ScreenManager.Instance.ChangeScreen("MainScreen");
             }
-            //if (keyboard.IsKeyDown(Keys.H))
-            //{
-            //    ScreenManager.Instance.ChangeScreen("HighScoreScreen");
-            //}
-
+      
             background.Update(gameTime);
             base.Update(gameTime);
         }
@@ -56,9 +55,10 @@
         public override void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch)
         {
             background.Draw(spriteBatch);
-            gameOverStats.Draw(spriteBatch);
-            score.Draw(spriteBatch);
+            highScoreStats.Draw(spriteBatch);
+            highscoreWriter.Draw(spriteBatch);
             base.Draw(spriteBatch);
         }
+
     }
 }

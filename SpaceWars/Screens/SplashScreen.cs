@@ -37,10 +37,17 @@
             {
                 ScreenManager.Instance.Engine.Exit();
             }
-            if (keyboard.IsKeyDown(Keys.Enter))
+            else if (keyboard.IsKeyDown(Keys.Enter))
             {
-
+                ScreenManager.Instance.ChangeScreen("MainScreen");
+            }
+            else if (keyboard.IsKeyDown(Keys.I))
+            {
                 ScreenManager.Instance.ChangeScreen("InstructionsScreen");
+            }
+            else if (keyboard.IsKeyDown(Keys.H))
+            {
+                ScreenManager.Instance.ChangeScreen("HighscoreScreen");
             }
             
             base.Update(gameTime);

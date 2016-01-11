@@ -9,14 +9,14 @@
     using SpaceWars.GameObjects;
     using SpaceWars.Interfaces;
 
-    public static  class Data
+    public static class Data
     {
         private static readonly List<int> score = new List<int>();
         private static string path = "Core/highscore.txt";
         private static SpriteBatch spriteBatch;
 
      
-        public static Stringer OutputWriter { get; set; }
+        //public static Stringer OutputWriter { get; set; }
         public static ICollection<int> Score { get; set; }
                 
         public static void AddScore(int score)
@@ -45,21 +45,22 @@
             }
         }
         //this method is called in HighScoreScreen class to show the top ten scores
-        public static void PrintScore()
+        public static string GetHighScore()
         {
             LoadScore();
+            StringBuilder output = new StringBuilder();
             if (Score.Any())
             {
-                var sortedScores = Score.OrderByDescending(x => x).Take(10);
-                StringBuilder output = new StringBuilder();
+                var sortedScores = Score.OrderByDescending(x => x).Take(5);
+                
                 int index = 1;
                 foreach (int score in sortedScores)
                 {
-                    output.AppendFormat("{0:10}  {1:10}  {2}", index,  score, Environment.NewLine);
+                    output.AppendFormat("{0,2}.{1,6}{2}", index,  score, Environment.NewLine);
                     index++;
                 }
             }
-            OutputWriter.Draw(spriteBatch);
+            return output.ToString();
         }
 
 

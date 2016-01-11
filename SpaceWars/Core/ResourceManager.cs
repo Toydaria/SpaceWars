@@ -1,6 +1,4 @@
-﻿
-
-namespace SpaceWars
+﻿namespace SpaceWars
 {
     using Microsoft.Xna.Framework.Graphics;
     using System.Collections.Generic;

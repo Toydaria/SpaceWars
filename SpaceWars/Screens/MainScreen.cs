@@ -42,7 +42,7 @@
             }
             //if (keyboard.IsKeyDown(Keys.H))
             //{
-            //    ScreenManager.Instance.ChangeScreen("HighScore");
+            //    ScreenManager.Instance.ChangeScreen("HighscoreScreen");
             //}
 
             objectManager.Update(gameTime);

@@ -18,6 +18,8 @@
                     return new GameOverScreen();
                 case "InstructionsScreen":
                     return new InstructionsScreen();
+                case "HighscoreScreen":
+                    return new HighscoreScreen();
                 default:
                     throw new InvalidOperationException("This screen doesen't exist.");
 

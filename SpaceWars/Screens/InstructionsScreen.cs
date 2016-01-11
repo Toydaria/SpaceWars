@@ -12,7 +12,7 @@
     {
         Starfield background = new Starfield();
         Image gameOverStats = new Image("Instructions");
-        private int buttonDelay = 10;
+       // private int buttonDelay = 10;
 
 
         public override void LoadContent(Microsoft.Xna.Framework.Content.ContentManager Content)
@@ -39,17 +39,17 @@
                 ScreenManager.Instance.Engine.Exit();
             }
 
-            if (buttonDelay == 0)
-            {
+            //if (buttonDelay == 0)
+            //{
                 if (keyboard.IsKeyDown(Keys.Enter))
                 {
                     ScreenManager.Instance.ChangeScreen("MainScreen");
                 }
-            }
-            else
-            {
-                buttonDelay--;
-            }
+            //}
+            //else
+            //{
+            //    buttonDelay--;
+            //}
             
             //if (keyboard.IsKeyDown(Keys.H))
             //{
